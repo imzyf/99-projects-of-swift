@@ -16,14 +16,19 @@
 
 ### 1
 ```
-[access] This app has crashed because it attempted to access privacy-sensitive data without a usage description.  The app's Info.plist must contain an NSMicrophoneUsageDescription key with a string value explaining to the user how the app uses this data.
+[access] This app has crashed because it attempted to access privacy-sensitive data
+without a usage description.  
+The app's Info.plist must contain an NSMicrophoneUsageDescription key with a string value
+explaining to the user how the app uses this data.
 ```
 
 add `NSMicrophoneUsageDescription` key in Info.plist
 
 ### 2
 ```
-Warning: Attempt to present <UIAlertController: 0x100c0c1c0> on <_02_audio_record_play.ViewController: 0x100c0a5d0> whose view is not in the window hierarchy!
+Warning: Attempt to present <UIAlertController: 0x100c0c1c0> on
+<_02_audio_record_play.ViewController: 0x100c0a5d0>
+whose view is not in the window hierarchy!
 ```
 
 [whose view is not in the window hierarchy](https://stackoverflow.com/questions/11862883/whose-view-is-not-in-the-window-hierarchy)
@@ -32,7 +37,9 @@ The solution for me was to move this call to the `viewDidAppear:` method.
 
 ### 3
 ```
-This application is modifying the autolayout engine from a background thread, which can lead to engine corruption and weird crashes. This will cause an exception in a future release.
+This application is modifying the autolayout engine from a background thread,
+which can lead to engine corruption and weird crashes.
+This will cause an exception in a future release.
 ```
 
 [Getting a “This application is modifying the autolayout engine from a background thread” error?](https://stackoverflow.com/questions/28302019/getting-a-this-application-is-modifying-the-autolayout-engine-from-a-background)

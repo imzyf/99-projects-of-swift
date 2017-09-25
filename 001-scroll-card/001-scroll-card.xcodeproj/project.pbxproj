@@ -12,6 +12,7 @@
 		FDB6F17A1F77FF29005B934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB6F1791F77FF29005B934D /* Assets.xcassets */; };
 		FDB6F17D1F77FF29005B934D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB6F17B1F77FF29005B934D /* LaunchScreen.storyboard */; };
 		FDB6F1851F7801EE005B934D /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6F1841F7801EE005B934D /* CustomLayout.swift */; };
+		FDB6F1A51F794B4D005B934D /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6F1A41F794B4D005B934D /* CustomViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FDB6F17C1F77FF29005B934D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDB6F17E1F77FF29005B934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB6F1841F7801EE005B934D /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		FDB6F1A41F794B4D005B934D /* CustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				FDB6F1721F77FF29005B934D /* AppDelegate.swift */,
-				FDB6F1841F7801EE005B934D /* CustomLayout.swift */,
 				FDB6F1741F77FF29005B934D /* ViewController.swift */,
+				FDB6F1841F7801EE005B934D /* CustomLayout.swift */,
+				FDB6F1A41F794B4D005B934D /* CustomViewCell.swift */,
 				FDB6F1791F77FF29005B934D /* Assets.xcassets */,
 				FDB6F17B1F77FF29005B934D /* LaunchScreen.storyboard */,
 				FDB6F17E1F77FF29005B934D /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB6F1851F7801EE005B934D /* CustomLayout.swift in Sources */,
+				FDB6F1A51F794B4D005B934D /* CustomViewCell.swift in Sources */,
 				FDB6F1751F77FF29005B934D /* ViewController.swift in Sources */,
 				FDB6F1731F77FF29005B934D /* AppDelegate.swift in Sources */,
 			);
@@ -294,6 +298,7 @@
 				FDB6F1831F77FF29005B934D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
