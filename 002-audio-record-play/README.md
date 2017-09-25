@@ -1,7 +1,8 @@
 # Audio Record And Play
 
 ## Demo
-![Audio Record And Play - demo](./002-demo.gif)
+
+<img src="./002-demo.gif" alt="Audio Record And Play - demo" width="300" />
 
 ## Introduction
 1. 导入 AVFoundation 框架。需要 AVAudioSession、AVAudioRecorder、AVAudioPlayer 等类。
