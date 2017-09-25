@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_02_audio_record_play" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-zI-Dcv">
+                                <rect key="frame" x="26" y="90" width="323" height="30"/>
+                                <state key="normal" title="start record"/>
+                                <connections>
+                                    <action selector="startRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kwo-sg-vs0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-M0-q6i">
+                                <rect key="frame" x="26" y="140" width="323" height="30"/>
+                                <state key="normal" title="stop record"/>
+                                <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HkX-RN-FH5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e95-IS-Tmk">
+                                <rect key="frame" x="26" y="190" width="323" height="30"/>
+                                <state key="normal" title="pause record"/>
+                                <connections>
+                                    <action selector="pauseRecoder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QyA-kz-Z8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-lk-HkM">
+                                <rect key="frame" x="26" y="240" width="323" height="30"/>
+                                <state key="normal" title="resume record"/>
+                                <connections>
+                                    <action selector="resumeRecoder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLa-Y2-U1a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-nM-drV">
+                                <rect key="frame" x="26" y="290" width="323" height="30"/>
+                                <state key="normal" title="start play"/>
+                                <connections>
+                                    <action selector="startPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zq0-9h-aah"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-PB-KMt">
+                                <rect key="frame" x="26" y="340" width="323" height="30"/>
+                                <state key="normal" title="stop play"/>
+                                <connections>
+                                    <action selector="stopPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9J-b8-Ydq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statusLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4r-4f-fOA">
+                                <rect key="frame" x="26" y="50" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e95-IS-Tmk" firstAttribute="top" secondItem="qnI-M0-q6i" secondAttribute="bottom" constant="20" id="4bB-0m-GKl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6bx-PB-KMt" secondAttribute="trailing" constant="10" id="4eN-7h-wJg"/>
+                            <constraint firstItem="6bx-PB-KMt" firstAttribute="top" secondItem="r2b-nM-drV" secondAttribute="bottom" constant="20" id="5Pi-Dl-gbS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qnI-M0-q6i" secondAttribute="trailing" constant="10" id="5wI-kQ-YgV"/>
+                            <constraint firstItem="0LX-zI-Dcv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="7cP-lN-lSU"/>
+                            <constraint firstItem="6bx-PB-KMt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="9Ab-YX-PI5"/>
+                            <constraint firstItem="e95-IS-Tmk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="CWa-dl-7xZ"/>
+                            <constraint firstItem="a4r-4f-fOA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Dfj-jY-z2J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3r0-lk-HkM" secondAttribute="trailing" constant="10" id="H1l-Fa-az9"/>
+                            <constraint firstItem="3r0-lk-HkM" firstAttribute="top" secondItem="e95-IS-Tmk" secondAttribute="bottom" constant="20" id="J3Z-rJ-wEg"/>
+                            <constraint firstItem="3r0-lk-HkM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Q7m-hK-73K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r2b-nM-drV" secondAttribute="trailing" constant="10" id="RcR-1O-D6V"/>
+                            <constraint firstItem="0LX-zI-Dcv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="bFw-is-ElX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a4r-4f-fOA" secondAttribute="trailing" constant="10" id="hDi-Y2-Vbt"/>
+                            <constraint firstItem="qnI-M0-q6i" firstAttribute="top" secondItem="0LX-zI-Dcv" secondAttribute="bottom" constant="20" id="mMf-0s-428"/>
+                            <constraint firstItem="r2b-nM-drV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="qOX-UK-Yww"/>
+                            <constraint firstItem="a4r-4f-fOA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="r8L-Sr-lhV"/>
+                            <constraint firstItem="qnI-M0-q6i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="rTA-5a-uX9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0LX-zI-Dcv" secondAttribute="trailing" constant="10" id="sGg-00-82i"/>
+                            <constraint firstItem="r2b-nM-drV" firstAttribute="top" secondItem="3r0-lk-HkM" secondAttribute="bottom" constant="20" id="wPS-4Q-M29"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e95-IS-Tmk" secondAttribute="trailing" constant="10" id="xZs-K7-j3H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="a4r-4f-fOA" id="mh6-yX-yTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
