@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,88 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_03_drawing_board" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POf-fh-ujF" customClass="DrawingBoard" customModule="_03_drawing_board" customModuleProvider="target">
+                                <rect key="frame" x="15" y="80" width="290" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFM-wj-Z00">
+                                <rect key="frame" x="50" y="40" width="79" height="30"/>
+                                <state key="normal" title="Save Image"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XjK-5a-OX8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-iJ-Fco">
+                                <rect key="frame" x="234" y="40" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearDrawBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E65-HY-U69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A7-0r-6b6">
+                                <rect key="frame" x="15" y="448" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.66274509800000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hiW-NP-NR2"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeStrokeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdG-j4-RrI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Uq-HV-8tJ">
+                                <rect key="frame" x="145" y="448" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lve-q4-zxT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeStrokeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lo6-bM-bUW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvM-rb-xFs">
+                                <rect key="frame" x="275" y="448" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.61568627450000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="PRy-nM-VbH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeStrokeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lqp-aM-laR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RMC-iJ-Fco" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GYs-Wr-kwP"/>
+                            <constraint firstItem="uFM-wj-Z00" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GzS-2l-aBt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kvM-rb-xFs" secondAttribute="trailing" constant="15" id="VQd-ap-GYC"/>
+                            <constraint firstItem="POf-fh-ujF" firstAttribute="top" secondItem="uFM-wj-Z00" secondAttribute="bottom" constant="10" id="ZfB-TW-q6L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Uq-HV-8tJ" secondAttribute="bottom" constant="90" id="dxw-9b-MNz"/>
+                            <constraint firstItem="uFM-wj-Z00" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="llo-cd-dPf"/>
+                            <constraint firstItem="7A7-0r-6b6" firstAttribute="top" secondItem="POf-fh-ujF" secondAttribute="bottom" constant="18" id="oOK-ch-YiN"/>
+                            <constraint firstItem="POf-fh-ujF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="oVn-7a-ZK2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RMC-iJ-Fco" secondAttribute="trailing" constant="50" id="qg6-n3-7W5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="POf-fh-ujF" secondAttribute="trailing" constant="15" id="rMq-2Q-1ia"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7A7-0r-6b6" secondAttribute="bottom" constant="90" id="sJh-qb-g29"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kvM-rb-xFs" secondAttribute="bottom" constant="90" id="spq-Su-6X5"/>
+                            <constraint firstItem="7A7-0r-6b6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ybB-Ts-vy6"/>
+                            <constraint firstItem="7Uq-HV-8tJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ziK-a0-Acp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="board" destination="POf-fh-ujF" id="p3z-yu-ofc"/>
+                        <outlet property="clearButton" destination="RMC-iJ-Fco" id="9WU-Mg-PwU"/>
+                        <outlet property="saveImageButton" destination="uFM-wj-Z00" id="OR5-8j-yUb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
