@@ -11,7 +11,7 @@ class CustomLayout: UICollectionViewFlowLayout {
         sectionInset = UIEdgeInsets(top: 0, left: SIDE_WIDTH, bottom: 0, right: SIDE_WIDTH)
         
         // 加速比例 默认值 0.998
-        collectionView?.decelerationRate = 0.993
+//        collectionView?.decelerationRate = 0.993
         
         super.prepare()
     }
