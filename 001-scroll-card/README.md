@@ -4,8 +4,16 @@
 
 <img src="./001-demo.gif" alt="Scroll Card - demo" width="300" />
 
+## Introduction
+
+1. 图片水平滚动。
+2. 根据位置有缩放效果。
+3. 屏幕中间的图片会停到中间的位置。
+
 ## Problem
+
 ### 1
+
 ```
 This is likely occurring because the flow layout subclass _01_scroll_card.CustomLayout is modifying attributes returned by UICollectionViewFlowLayout without copying them
 ```
