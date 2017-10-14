@@ -1,9 +1,9 @@
 # 99 Projects of Swift
 
-模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。
+![](https://img.shields.io/badge/language-Swift%204-orange.svg)
+![](https://img.shields.io/badge/Xcode-9-brightgreen.svg)
 
-- Swift 4
-- Xcode 9
+模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。
 
 ## [001 Scroll Card](./001-scroll-card)
 `UICollectionView` `UICollectionViewFlowLayout` 卡片横向缩放滑动。
@@ -19,3 +19,8 @@
 简单画板。
 
 <img src="./003-drawing-board/003-demo.gif" alt="Drawing Board - demo" width="200" />
+
+## [004 Login Animation](./004-login-animation)
+登陆框动效。
+
+<img src="./004-login-animation/004-demo.gif" alt="Login Animation - demo" width="200" />
