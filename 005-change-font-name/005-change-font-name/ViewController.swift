@@ -10,16 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var changeButton: UIButton!
+    
+    var familyNames = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        familyNames = UIFont.familyNames
+        for familyName in familyNames {
+            print("++++++ \(familyName)")
+            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+            for fontName in fontNames {
+                print("----- \(fontName)")
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func changeFontFamily() {
+        let name = familyNames[randomCustom(min: 0, max: familyNames.count)]
+        nameLabel.text = name
+        titleLabel.font = UIFont(name: name, size: 20)
     }
-
+    
+    // 左闭右开
+    func randomCustom(min: Int, max: Int) -> Int {
+        let y = arc4random() % UInt32(max) + UInt32(min)
+        print(y)
+        return Int(y)
+    }
 
 }
 
