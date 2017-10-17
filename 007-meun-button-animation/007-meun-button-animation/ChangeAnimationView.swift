@@ -1,6 +1,6 @@
 import UIKit
 
-class ChangeAnimationView: UIView {
+class ChangeAnimationView: UIView, CAAnimationDelegate {
     
     // 按钮 三条线
     var topLineLayer: CAShapeLayer!
@@ -30,6 +30,9 @@ class ChangeAnimationView: UIView {
         self.backgroundColor = .orange
         
         initLayers()
+        
+        animationStep1()
+      
     }
     
     func initLayers() {
@@ -73,8 +76,62 @@ class ChangeAnimationView: UIView {
         layer.addSublayer(lineLayer)
     }
     
+    // 执行 delegate
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if let animationID = anim.value(forKey: "animationID") {
+            switch animationID as! String {
+                case "step1":
+                    animationStep2()
+                    break
+                case "step2":
+                    animationStep1()
+                    break
+                default: break
+            }
+            
+ 
+        }
+    }
+    
     func animationStep1() {
+        let strokAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokAnimation.fromValue = 1.0
+        strokAnimation.toValue = 0.4
         
+        let pathAnimation = CABasicAnimation(keyPath: "position.x")
+        pathAnimation.fromValue = 0.0
+        pathAnimation.toValue = -10.0
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.animations = [strokAnimation, pathAnimation]
+        animationGroup.duration = CFTimeInterval(kStep1Duration)
+        animationGroup.setValue("step1", forKey: "animationID" )
+        animationGroup.delegate = self
+        middleLineLayer.add(animationGroup, forKey: nil)
+        
+    }
+ 
+    func animationStep2() {
+        let strokAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokAnimation.fromValue = 0.4
+        strokAnimation.toValue = 0.8
+        
+        let pathAnimation = CABasicAnimation(keyPath: "position.x")
+        pathAnimation.fromValue = -10.0
+        pathAnimation.toValue = 0.2*lineWidth
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.animations = [strokAnimation, pathAnimation]
+        animationGroup.duration = CFTimeInterval(kStep1Duration)
+        animationGroup.setValue("step2", forKey: "animationID" )
+        animationGroup.delegate = self
+        middleLineLayer.add(animationGroup, forKey: nil)
+        
+    }
+    
+    func animationStep3() {
+        let path = UIBezierPath()
+       
         
     }
     
