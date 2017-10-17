@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        let animationView = ChangeAnimationView(frame: self.view.frame)
+        animationView.frame.size.height = 200
+        animationView.center = self.view.center
+        self.view.addSubview(animationView)
     }
 
     override func didReceiveMemoryWarning() {
