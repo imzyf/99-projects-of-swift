@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [006 Timer](./006-timer)
+定时器。
+
+<img src="./006-timer/006-demo.gif" alt="Timer - demo" width="200" />
+
 ## [005 Change Font Name](./005-change-font-name)
 修改 Label 字体。
 

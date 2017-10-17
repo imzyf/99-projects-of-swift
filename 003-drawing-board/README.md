@@ -16,6 +16,6 @@
 
 1. 线条更加自然，有粗细变化。 eg: [AfryMask/AFBrushBoard - 毛笔画板](https://github.com/AfryMask/AFBrushBoard)
 
-### Reference
+## Reference
 
 - [cjiong/LearnSwift - DrawingBoard](https://github.com/cjiong/LearnSwift/tree/master/Project%2046%20-%20DrawingBoard)

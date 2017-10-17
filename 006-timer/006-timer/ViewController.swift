@@ -13,6 +13,9 @@ import SnapKit
 class ViewController: UIViewController {
     
     var timeLabel: UILabel!
+    var timer: Timer!
+    var time = 0.0
+    var startButton: UIButton!
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +31,12 @@ class ViewController: UIViewController {
             make.top.equalTo(30)
             make.right.equalTo(-30)
         }
+        resetButton.addTarget(self, action: #selector(resetAction), for: .touchUpInside)
         
         // 计时 Label
         timeLabel = UILabel()
         self.view.addSubview(timeLabel)
-        timeLabel.text = "0.0"
+        timeLabel.text = "00:00.0"
         timeLabel.font = UIFont.systemFont(ofSize: 40)
         timeLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.view)
@@ -40,41 +44,70 @@ class ViewController: UIViewController {
         }
         
         // start
-        let startView = UIView()
-        self.view.addSubview(startView)
-        startView.backgroundColor = UIColor(red: 1, green: 101/255.0, blue: 27/255.0, alpha: 1)
-        startView.snp.makeConstraints { (make) in
+        startButton = UIButton()
+        self.view.addSubview(startButton)
+        startButton.setTitle("Start", for: .normal)
+        startButton.setTitleColor(.white, for: .normal)
+        startButton.backgroundColor = UIColor(red: 1, green: 101/255.0, blue: 27/255.0, alpha: 1)
+        startButton.addTarget(self, action: #selector(startAction), for: .touchUpInside)
+        startButton.snp.makeConstraints { (make) in
             make.left.bottom.equalTo(0)
             make.width.equalTo(self.view.frame.width/2)
             make.height.equalTo(self.view.frame.height/2)
         }
         
-        let startButton = UIButton()
-        startView.addSubview(startButton)
-        startButton.setTitle("Start", for: .normal)
-        startButton.setTitleColor(.white, for: .normal)
-        startButton.snp.makeConstraints { (make) in
-            make.center.equalTo(startView)
-        }
-        
         // end - 直接添加 button
         let endButton = UIButton()
         self.view.addSubview(endButton)
-        endButton.setTitle("End", for: .normal)
+        endButton.setTitle("Stop", for: .normal)
         endButton.setTitleColor(.white, for: .normal)
         endButton.backgroundColor = UIColor(red: 98/255.0, green: 242/255.0, blue: 23/255.0, alpha: 1)
         endButton.snp.makeConstraints { (make) in
             make.right.bottom.equalTo(0)
-            make.size.equalTo(startView)
+            make.size.equalTo(startButton)
         }
+        endButton.addTarget(self, action: #selector(stopAction), for: .touchUpInside)
         
+    }
+    
+    @objc func startAction() {
+        if startButton.isEnabled {
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
+                self.time += 0.1
+                self.timeLabel.text = self.time2String(time: self.time)
+            })
+            self.timer.fire()
+            startButton.isEnabled = false
+            startButton.setTitle("Running", for: .normal)
+        }
+    }
+    
+    @objc func stopAction() {
+        guard let timerForDistory = self.timer
+            else {return}
+        timerForDistory.invalidate()
+        startButton.isEnabled = true
+        startButton.setTitle("Resume", for: .normal)
+    }
+    
+    @objc func resetAction() {
+        stopAction()
+        self.time = 0.0
+        self.timeLabel.text = "00:00.0"
+        startButton.setTitle("Start", for: .normal)
+    }
+    
+    func time2String(time:TimeInterval) -> String {
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        let milliseconds = Int(time*10) % 10
+        return String(format:"%02i:%02i.%01i", minutes, seconds, milliseconds)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 

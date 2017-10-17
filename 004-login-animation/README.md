@@ -27,6 +27,6 @@
 
 ![](./readme-img/Animation-Comparation.png)
 
-### Reference
+## Reference
 
 - [抓住iOS的未来 - 30天学习编写30个Swift小程序 - 16](http://www.jianshu.com/p/c6ae28964ad5)
