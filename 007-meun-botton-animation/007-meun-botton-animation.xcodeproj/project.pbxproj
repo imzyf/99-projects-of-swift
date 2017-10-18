@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37A358D26F1FD3794DD0919A /* Pods_007_meun_button_animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF9FE9225DD537A4D1A763E /* Pods_007_meun_button_animation.framework */; };
+		9BF75BE9A22373EA886860EB /* Pods_007_meun_botton_animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799F1EE260DE6B718061507B /* Pods_007_meun_botton_animation.framework */; };
 		FDD929DD1F95DF8C0077493A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD929DC1F95DF8C0077493A /* AppDelegate.swift */; };
 		FDD929DF1F95DF8C0077493A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD929DE1F95DF8C0077493A /* ViewController.swift */; };
 		FDD929E21F95DF8C0077493A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD929E01F95DF8C0077493A /* Main.storyboard */; };
@@ -18,9 +18,12 @@
 
 /* Begin PBXFileReference section */
 		444F1B8AA9A7E1A5677A321D /* Pods-007-meun-button-animation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-meun-button-animation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-007-meun-button-animation/Pods-007-meun-button-animation.debug.xcconfig"; sourceTree = "<group>"; };
+		799F1EE260DE6B718061507B /* Pods_007_meun_botton_animation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_007_meun_botton_animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34AEA270A3F8CAE2F5B6652 /* Pods-007-meun-button-animation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-meun-button-animation.release.xcconfig"; path = "Pods/Target Support Files/Pods-007-meun-button-animation/Pods-007-meun-button-animation.release.xcconfig"; sourceTree = "<group>"; };
 		BBF9FE9225DD537A4D1A763E /* Pods_007_meun_button_animation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_007_meun_button_animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDD929D91F95DF8C0077493A /* 007-meun-button-animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-meun-button-animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3109FE922CD38D5CEBDB2F /* Pods-007-meun-botton-animation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-meun-botton-animation.release.xcconfig"; path = "Pods/Target Support Files/Pods-007-meun-botton-animation/Pods-007-meun-botton-animation.release.xcconfig"; sourceTree = "<group>"; };
+		F09AC30A7E73B1ABBBF644AF /* Pods-007-meun-botton-animation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-meun-botton-animation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-007-meun-botton-animation/Pods-007-meun-botton-animation.debug.xcconfig"; sourceTree = "<group>"; };
+		FDD929D91F95DF8C0077493A /* 007-meun-botton-animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-meun-botton-animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD929DC1F95DF8C0077493A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD929DE1F95DF8C0077493A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDD929E11F95DF8C0077493A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A358D26F1FD3794DD0919A /* Pods_007_meun_button_animation.framework in Frameworks */,
+				9BF75BE9A22373EA886860EB /* Pods_007_meun_botton_animation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				BBF9FE9225DD537A4D1A763E /* Pods_007_meun_button_animation.framework */,
+				799F1EE260DE6B718061507B /* Pods_007_meun_botton_animation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -53,7 +57,7 @@
 		FDD929D01F95DF8C0077493A = {
 			isa = PBXGroup;
 			children = (
-				FDD929DB1F95DF8C0077493A /* 007-meun-button-animation */,
+				FDD929DB1F95DF8C0077493A /* 007-meun-botton-animation */,
 				FDD929DA1F95DF8C0077493A /* Products */,
 				FF32861EB39A02FA0A3CE51A /* Pods */,
 				2FB6806838D59B2D80CEAED9 /* Frameworks */,
@@ -63,12 +67,12 @@
 		FDD929DA1F95DF8C0077493A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FDD929D91F95DF8C0077493A /* 007-meun-button-animation.app */,
+				FDD929D91F95DF8C0077493A /* 007-meun-botton-animation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FDD929DB1F95DF8C0077493A /* 007-meun-button-animation */ = {
+		FDD929DB1F95DF8C0077493A /* 007-meun-botton-animation */ = {
 			isa = PBXGroup;
 			children = (
 				FDD929DC1F95DF8C0077493A /* AppDelegate.swift */,
@@ -79,7 +83,7 @@
 				FDD929E81F95DF8C0077493A /* Info.plist */,
 				FDD929EE1F95E0DD0077493A /* ChangeAnimationView.swift */,
 			);
-			path = "007-meun-button-animation";
+			path = "007-meun-botton-animation";
 			sourceTree = "<group>";
 		};
 		FF32861EB39A02FA0A3CE51A /* Pods */ = {
@@ -87,6 +91,8 @@
 			children = (
 				444F1B8AA9A7E1A5677A321D /* Pods-007-meun-button-animation.debug.xcconfig */,
 				A34AEA270A3F8CAE2F5B6652 /* Pods-007-meun-button-animation.release.xcconfig */,
+				F09AC30A7E73B1ABBBF644AF /* Pods-007-meun-botton-animation.debug.xcconfig */,
+				DF3109FE922CD38D5CEBDB2F /* Pods-007-meun-botton-animation.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -94,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FDD929D81F95DF8C0077493A /* 007-meun-button-animation */ = {
+		FDD929D81F95DF8C0077493A /* 007-meun-botton-animation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDD929EB1F95DF8C0077493A /* Build configuration list for PBXNativeTarget "007-meun-button-animation" */;
+			buildConfigurationList = FDD929EB1F95DF8C0077493A /* Build configuration list for PBXNativeTarget "007-meun-botton-animation" */;
 			buildPhases = (
 				E86459F45DBC154DBB67A854 /* [CP] Check Pods Manifest.lock */,
 				FDD929D51F95DF8C0077493A /* Sources */,
@@ -109,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = "007-meun-button-animation";
+			name = "007-meun-botton-animation";
 			productName = "007-meun-button-animation";
-			productReference = FDD929D91F95DF8C0077493A /* 007-meun-button-animation.app */;
+			productReference = FDD929D91F95DF8C0077493A /* 007-meun-botton-animation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FDD929D41F95DF8C0077493A /* Build configuration list for PBXProject "007-meun-button-animation" */;
+			buildConfigurationList = FDD929D41F95DF8C0077493A /* Build configuration list for PBXProject "007-meun-botton-animation" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FDD929D81F95DF8C0077493A /* 007-meun-button-animation */,
+				FDD929D81F95DF8C0077493A /* 007-meun-botton-animation */,
 			);
 		};
 /* End PBXProject section */
@@ -168,7 +174,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-007-meun-button-animation/Pods-007-meun-button-animation-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-007-meun-botton-animation/Pods-007-meun-botton-animation-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BezierPathLength/BezierPathLength.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -177,7 +183,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-007-meun-button-animation/Pods-007-meun-button-animation-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-007-meun-botton-animation/Pods-007-meun-botton-animation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE7C93D9E3BD37E83E930FDE /* [CP] Copy Pods Resources */ = {
@@ -192,7 +198,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-007-meun-button-animation/Pods-007-meun-button-animation-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-007-meun-botton-animation/Pods-007-meun-botton-animation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E86459F45DBC154DBB67A854 /* [CP] Check Pods Manifest.lock */ = {
@@ -206,7 +212,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-007-meun-button-animation-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-007-meun-botton-animation-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -357,14 +363,14 @@
 		};
 		FDD929EC1F95DF8C0077493A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 444F1B8AA9A7E1A5677A321D /* Pods-007-meun-button-animation.debug.xcconfig */;
+			baseConfigurationReference = F09AC30A7E73B1ABBBF644AF /* Pods-007-meun-botton-animation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DM78HJ4CZ6;
-				INFOPLIST_FILE = "007-meun-button-animation/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/007-meun-botton-animation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-07-meun-button-animation";
+				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-07-meun-botton-animation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,14 +379,14 @@
 		};
 		FDD929ED1F95DF8C0077493A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A34AEA270A3F8CAE2F5B6652 /* Pods-007-meun-button-animation.release.xcconfig */;
+			baseConfigurationReference = DF3109FE922CD38D5CEBDB2F /* Pods-007-meun-botton-animation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DM78HJ4CZ6;
-				INFOPLIST_FILE = "007-meun-button-animation/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/007-meun-botton-animation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-07-meun-button-animation";
+				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-07-meun-botton-animation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FDD929D41F95DF8C0077493A /* Build configuration list for PBXProject "007-meun-button-animation" */ = {
+		FDD929D41F95DF8C0077493A /* Build configuration list for PBXProject "007-meun-botton-animation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDD929E91F95DF8C0077493A /* Debug */,
@@ -399,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDD929EB1F95DF8C0077493A /* Build configuration list for PBXNativeTarget "007-meun-button-animation" */ = {
+		FDD929EB1F95DF8C0077493A /* Build configuration list for PBXNativeTarget "007-meun-botton-animation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDD929EC1F95DF8C0077493A /* Debug */,
