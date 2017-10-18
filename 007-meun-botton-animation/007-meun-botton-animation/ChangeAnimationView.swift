@@ -13,14 +13,14 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
     var bottomLayer: CALayer!
     
     let raduis: CGFloat = 50.0
-    let lineWidth: CGFloat =  50.0
+    let lineWidth: CGFloat = 50.0
     let lineGapHeight: CGFloat = 10.0
     let lineHeight: CGFloat = 8.0
     
-    let kStep1Duration: CGFloat = 1.5
-    let kStep2Duration: CGFloat = 1.5
-    let kStep3Duration: CGFloat = 5.0
-    let kStep4Duration: CGFloat = 5.0
+    let kStep1Duration: CGFloat = 0.3
+    let kStep2Duration: CGFloat = 0.3
+    let kStep3Duration: CGFloat = 1.0
+    let kStep4Duration: CGFloat = 1.0
     
     let kTopY: CGFloat!
     let kCenterY: CGFloat!
@@ -36,7 +36,7 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         
         initLayers()
         
-        animationStep3()
+        animationStep1()
       
     }
     
@@ -93,6 +93,8 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
                     animationStep3()
                     break
                 case "step3":
+                    middleLineLayer.path = nil
+                    initLayers()
                     animationStep1()
                     break
                 default: break
@@ -103,7 +105,7 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
     func animationStep1() {
         let strokAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokAnimation.fromValue = 1.0
-        strokAnimation.toValue = 0.4
+        strokAnimation.toValue = 0.7
         
         let pathAnimation = CABasicAnimation(keyPath: "position.x")
         pathAnimation.fromValue = 0.0
@@ -120,12 +122,12 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
  
     func animationStep2() {
         let strokAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        strokAnimation.fromValue = 0.4
-        strokAnimation.toValue = 0.8
+        strokAnimation.fromValue = 0.7
+        strokAnimation.toValue = 0.5
         
         let pathAnimation = CABasicAnimation(keyPath: "position.x")
         pathAnimation.fromValue = -10.0
-        pathAnimation.toValue = 0.2*lineWidth
+        pathAnimation.toValue = 0.5*lineWidth
         
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [strokAnimation, pathAnimation]
@@ -141,14 +143,14 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         let startPoint = CGPoint(x: lineWidth/2, y: 0)
         
         // 1 - 向上的旋转 - endPoint 是圆上 -30°
-        let angle30: CGFloat = .pi * 30 / 180
+        let angle: CGFloat = .pi * 30 / 180
         // 结束点
         var endPoint = CGPoint()
-        endPoint.x = lineWidth/2.0 + cos(angle30) * raduis
-        endPoint.y = 0 - sin(angle30) * raduis
+        endPoint.x = lineWidth/2.0 + cos(angle) * raduis
+        endPoint.y = 0 - sin(angle) * raduis
     
         // 控制点
-        let controlPointX: CGFloat = lineWidth/2.0 +  acos(angle30) * raduis
+        let controlPointX: CGFloat = lineWidth/2.0 +  acos(angle) * raduis
         let controlPointY: CGFloat = 0
         let controlPoint = CGPoint(x: controlPointX, y: controlPointY)
         
@@ -160,34 +162,37 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         let curveLength = path.length
         
         // 2 - 弧度 CD
-        let pathCD = UIBezierPath(arcCenter: CGPoint(x: lineWidth/2, y: 0), radius: raduis, startAngle: .pi * 2 - angle30 , endAngle: .pi + angle30 , clockwise: false)
+        let pathCD = UIBezierPath(arcCenter: CGPoint(x: lineWidth/2, y: 0), radius: raduis, startAngle: .pi * 2 - angle , endAngle: .pi + angle , clockwise: false)
         
         path.append(pathCD)
         
         // 3 - DD'
-        let pathDD = UIBezierPath(arcCenter: CGPoint(x: lineWidth/2, y: 0), radius: raduis, startAngle: .pi*3/2 - (.pi/2-angle30) , endAngle: -.pi/2 - (.pi/2-angle30) , clockwise: false)
+        let pathDD = UIBezierPath(arcCenter: CGPoint(x: lineWidth/2, y: 0), radius: raduis, startAngle: .pi*3/2 - (.pi/2-angle) , endAngle: -.pi/2 - (.pi/2-angle) , clockwise: false)
         
         path.append(pathDD)
         
         middleLineLayer.path = path.cgPath
         
-        //
-        let calculateTotalLength = path.length
-        //
-        let originPercent: CGFloat = curveLength/calculateTotalLength
-  
-        let endPercent: CGFloat = (curveLength + raduis * 2/3 * .pi)/calculateTotalLength
+        // path 总长度
+        let pathTotalLength = path.length
+        
+        // 初始笔记：拐角弧线的三分之一 （视觉测试）
+        let originPercent: CGFloat = curveLength/pathTotalLength/3
+        // 尾迹：拐角弧线 + 120° 弧线
+        let endPercent: CGFloat = (curveLength + raduis * (.pi - 2*angle))/pathTotalLength
    
+        let endAnimation = CAKeyframeAnimation(keyPath: "strokeEnd")
+        endAnimation.values = [originPercent, 1]
+        
         let startAnimation = CAKeyframeAnimation(keyPath: "strokeStart")
         startAnimation.values = [0.0, endPercent]
         
-        let endAnimation = CAKeyframeAnimation(keyPath: "strokeEnd")
-        endAnimation.values = [originPercent, 1]
+        
 
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [startAnimation, endAnimation]
-        animationGroup.duration = CFTimeInterval(kStep2Duration)
-//        animationGroup.setValue("step3", forKey: "animationID" )
+        animationGroup.duration = CFTimeInterval(kStep3Duration)
+        animationGroup.setValue("step3", forKey: "animationID" )
         animationGroup.delegate = self
         middleLineLayer.add(animationGroup, forKey: nil)
     }
