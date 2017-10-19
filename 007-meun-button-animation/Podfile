@@ -2,6 +2,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
 
-target '007-meun-botton-animation' do
+target '007-meun-button-animation' do
     pod 'BezierPathLength', '~> 1.0.0'
 end
