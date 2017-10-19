@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [007 Meun Button Animation](./007-meun-button-animation)
+菜单键动画。
+
+<img src="./007-meun-button-animation/007-demo.gif" alt="Meun Button Animation - demo" width="200" />
+
 ## [006 Timer](./006-timer)
 定时器。
 

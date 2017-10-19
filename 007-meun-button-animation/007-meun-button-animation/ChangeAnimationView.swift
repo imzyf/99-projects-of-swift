@@ -8,10 +8,6 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
     var middleLineLayer: CAShapeLayer!
     var bottomLineLayer: CAShapeLayer!
     
-    var topLayer: CALayer!
-    var middleLayer: CALayer!
-    var bottomLayer: CALayer!
-    
     let raduis: CGFloat = 50.0
     let lineWidth: CGFloat = 50.0
     let lineGapHeight: CGFloat = 10.0
@@ -37,12 +33,11 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         initLayers()
         
         animationStep1()
-      
     }
     
     func initLayers() {
         // top
-          topLayer = CALayer()
+        let topLayer = CALayer()
         self.layer.addSublayer(topLayer)
         topLayer.frame = CGRect(x: (self.bounds.size.width - lineWidth)/2, y: kTopY, width: lineWidth, height: lineWidth)
         
@@ -50,7 +45,7 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         initLine(topLineLayer, in: topLayer)
         
         // middle
-          middleLayer = CALayer()
+        let  middleLayer = CALayer()
         self.layer.addSublayer(middleLayer)
         middleLayer.frame = topLayer.frame
         middleLayer.frame.origin.y = kCenterY
@@ -59,7 +54,7 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         initLine(middleLineLayer, in: middleLayer)
         
         // buttom
-          bottomLayer = CALayer()
+        let  bottomLayer = CALayer()
         self.layer.addSublayer(bottomLayer)
         bottomLayer.frame = topLayer.frame
         bottomLayer.frame.origin.y = kBottomY
@@ -86,18 +81,21 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if let animationID = anim.value(forKey: "animationID") {
             switch animationID as! String {
-                case "step1":
-                    animationStep2()
-                    break
-                case "step2":
-                    animationStep3()
-                    break
-                case "step3":
-                    middleLineLayer.path = nil
-                    initLayers()
-                    animationStep1()
-                    break
-                default: break
+            case "step1":
+                animationStep2()
+                break
+            case "step2":
+                animationStep3()
+                break
+            case "step3":
+                // 清除原来的路径 - don't know why
+                middleLineLayer.path = nil
+                topLineLayer.path = nil
+                bottomLineLayer.path = nil
+                initLayers()
+                animationStep1()
+                break
+            default: break
             }
         }
     }
@@ -119,7 +117,7 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         middleLineLayer.add(animationGroup, forKey: nil)
         
     }
- 
+    
     func animationStep2() {
         let strokAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokAnimation.fromValue = 0.7
@@ -148,7 +146,7 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         var endPoint = CGPoint()
         endPoint.x = lineWidth/2.0 + cos(angle) * raduis
         endPoint.y = 0 - sin(angle) * raduis
-    
+        
         // 控制点
         let controlPointX: CGFloat = lineWidth/2.0 +  acos(angle) * raduis
         let controlPointY: CGFloat = 0
@@ -180,28 +178,62 @@ class ChangeAnimationView: UIView, CAAnimationDelegate {
         let originPercent: CGFloat = curveLength/pathTotalLength/3
         // 尾迹：拐角弧线 + 120° 弧线
         let endPercent: CGFloat = (curveLength + raduis * (.pi - 2*angle))/pathTotalLength
-   
+        
         let endAnimation = CAKeyframeAnimation(keyPath: "strokeEnd")
         endAnimation.values = [originPercent, 1]
         
         let startAnimation = CAKeyframeAnimation(keyPath: "strokeStart")
         startAnimation.values = [0.0, endPercent]
         
-        
-
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [startAnimation, endAnimation]
         animationGroup.duration = CFTimeInterval(kStep3Duration)
         animationGroup.setValue("step3", forKey: "animationID" )
         animationGroup.delegate = self
+        
+        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.isRemovedOnCompletion = false
+        
         middleLineLayer.add(animationGroup, forKey: nil)
+        
+        animationStep3_1()
     }
     
-  
+    func animationStep3_1() {
+        
+        // 平移量 - don't know why
+        let toValue: CGFloat = lineWidth * (1 - cos(.pi/4)) / 2.0;
+        
+        let xRotationAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        xRotationAnimation.values = [0,toValue]
+        let angle10: CGFloat = .pi * 10 / 180
+        
+        let zRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        zRotationAnimation.values = [0, angle10, -(angle10+CGFloat.pi/4), -CGFloat.pi/4]
+        
+        
+        let zTopRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        zTopRotationAnimation.values = [0, -angle10, (angle10+CGFloat.pi/4), CGFloat.pi/4]
+        
+        var animationGroup = CAAnimationGroup()
+        animationGroup.animations = [xRotationAnimation ,zTopRotationAnimation]
+        animationGroup.duration = CFTimeInterval(kStep3Duration)
+        animationGroup.delegate = self
+        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.isRemovedOnCompletion = false
+        topLineLayer.add(animationGroup, forKey: nil)
+        
+        animationGroup = CAAnimationGroup()
+        animationGroup.animations = [xRotationAnimation ,zRotationAnimation]
+        animationGroup.duration = CFTimeInterval(kStep3Duration)
+        animationGroup.delegate = self
+        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.isRemovedOnCompletion = false
+        bottomLineLayer.add(animationGroup, forKey: nil)
+    }
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
 }

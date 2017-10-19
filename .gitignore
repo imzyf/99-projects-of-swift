@@ -30,3 +30,6 @@ playground.xcworkspace
 .build/
 
 */Pods/
+*.xccheckout
+*.xcworkspace
+!default.xcworkspace
