@@ -5,6 +5,12 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [008 Find My Position](./008-find-my-position)
+CoreLocation 简单定位。
+
+<img src="./008-find-my-position/008-demo.gif" alt="Find My Position - demo" width="200" />
+
+
 ## [007 Meun Button Animation](./007-meun-button-animation)
 菜单键动画。
 
