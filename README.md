@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [010 Pull To Refresh](./010-pull-to-refresh)
+下拉刷新。
+
+<img src="./010-pull-to-refresh/010-demo.gif" alt="Pull To Refresh - demo" width="200" />
+
 ## [009 Limited Input Text Field](./009-limited-input-text-field)
 输入框字数限制。
 
