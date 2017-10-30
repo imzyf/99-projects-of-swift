@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class ViewController: UIViewController,
 UITableViewDataSource, UITableViewDelegate {
@@ -51,6 +52,17 @@ UITableViewDataSource, UITableViewDelegate {
         return 220
     }
     
+    @IBAction func playVideo() {
+        let videoUrl = URL(string: "http://techslides.com/demos/sample-videos/small.mp4")
+        let player = AVPlayer(url: videoUrl!)
+        
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        self.present(playerViewController, animated: true) {
+            playerViewController.player?.play()
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

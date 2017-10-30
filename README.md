@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [011 Video Player](./011-video-player)
+视频播放。
+
+<img src="./011-video-player/011-demo.gif" alt="Video Player - demo" width="200" />
+
 ## [010 Pull To Refresh](./010-pull-to-refresh)
 下拉刷新。
 

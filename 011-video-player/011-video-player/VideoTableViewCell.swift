@@ -5,7 +5,7 @@ class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var videoImage: UIImageView!
     @IBOutlet weak var videoSourceLabel: UILabel!
     @IBOutlet weak var videoInfoLabel: UILabel!
-      
+    
 }
 
 struct video {
