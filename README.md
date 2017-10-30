@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [012 CoreData TODO List](./012-coredata-todo-list)
+使用 CoreData 的 TODO 列表。
+
+<img src="./012-coredata-todo-list/012-demo.gif" alt="CoreData TODO List - demo" width="200" />
+
 ## [011 Video Player](./011-video-player)
 视频播放。
 
