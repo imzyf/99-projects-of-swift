@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [013 Simple Photo Browser](./013-simple-photo-browser)
+图片缩放。
+
+<img src="./013-simple-photo-browser/013-demo.gif" alt="Simple Photo Browser - demo" width="200" />
+
 ## [012 CoreData TODO List](./012-coredata-todo-list)
 使用 CoreData 的 TODO 列表。
 
