@@ -1,9 +1,15 @@
-//
-//  VideoTableViewCell.swift
-//  011-video-player
-//
-//  Created by  moma on 2017/10/30.
-//  Copyright © 2017年 yifans. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class VideoTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var videoImage: UIImageView!
+    @IBOutlet weak var videoSourceLabel: UILabel!
+    @IBOutlet weak var videoInfoLabel: UILabel!
+      
+}
+
+struct video {
+    let image: String
+    let title: String
+    let source: String
+}

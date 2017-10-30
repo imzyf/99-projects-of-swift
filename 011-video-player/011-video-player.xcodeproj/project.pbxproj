@@ -12,6 +12,7 @@
 		FD06969E1FA35A120032C288 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD06969C1FA35A120032C288 /* Main.storyboard */; };
 		FD0696A01FA35A120032C288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD06969F1FA35A120032C288 /* Assets.xcassets */; };
 		FD0696A31FA35A120032C288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0696A11FA35A120032C288 /* LaunchScreen.storyboard */; };
+		FD7703271FA7075F00E41D45 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7703261FA7075F00E41D45 /* VideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FD06969F1FA35A120032C288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD0696A21FA35A120032C288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD0696A41FA35A120032C288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD7703261FA7075F00E41D45 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FD0696981FA35A120032C288 /* AppDelegate.swift */,
 				FD06969A1FA35A120032C288 /* ViewController.swift */,
+				FD7703261FA7075F00E41D45 /* VideoTableViewCell.swift */,
 				FD06969C1FA35A120032C288 /* Main.storyboard */,
 				FD06969F1FA35A120032C288 /* Assets.xcassets */,
 				FD0696A11FA35A120032C288 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				FD06969B1FA35A120032C288 /* ViewController.swift in Sources */,
 				FD0696991FA35A120032C288 /* AppDelegate.swift in Sources */,
+				FD7703271FA7075F00E41D45 /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
