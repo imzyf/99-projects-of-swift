@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [015 Stretchy Header](./015-stretchy-header)
+弹性头部。
+
+<img src="./015-stretchy-header/015-demo.gif" alt="Stretchy Header - demo" width="200" />
+
 ## [014 Video Splash](./014-video-splash)
 背景视频。
 
