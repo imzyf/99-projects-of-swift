@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+def libraries
+    pod 'Alamofire'
+    pod 'Moya'
+    pod 'SwiftyJSON'
+end
+
+target '016-moya-simple' do
+    libraries
+end
