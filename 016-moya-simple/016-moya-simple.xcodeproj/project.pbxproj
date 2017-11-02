@@ -13,6 +13,7 @@
 		FDDD054F1FAB3ADB00C6C070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDD054D1FAB3ADB00C6C070 /* Main.storyboard */; };
 		FDDD05511FAB3ADB00C6C070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDD05501FAB3ADB00C6C070 /* Assets.xcassets */; };
 		FDDD05541FAB3ADB00C6C070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDD05521FAB3ADB00C6C070 /* LaunchScreen.storyboard */; };
+		FDDD055C1FAB3CF900C6C070 /* DouBan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD055B1FAB3CF900C6C070 /* DouBan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FDDD05501FAB3ADB00C6C070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDD05531FAB3ADB00C6C070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDDD05551FAB3ADB00C6C070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDD055B1FAB3CF900C6C070 /* DouBan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				FDDD05491FAB3ADB00C6C070 /* AppDelegate.swift */,
 				FDDD054B1FAB3ADB00C6C070 /* ViewController.swift */,
+				FDDD055B1FAB3CF900C6C070 /* DouBan.swift */,
 				FDDD054D1FAB3ADB00C6C070 /* Main.storyboard */,
 				FDDD05501FAB3ADB00C6C070 /* Assets.xcassets */,
 				FDDD05521FAB3ADB00C6C070 /* LaunchScreen.storyboard */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDD055C1FAB3CF900C6C070 /* DouBan.swift in Sources */,
 				FDDD054C1FAB3ADB00C6C070 /* ViewController.swift in Sources */,
 				FDDD054A1FAB3ADB00C6C070 /* AppDelegate.swift in Sources */,
 			);
