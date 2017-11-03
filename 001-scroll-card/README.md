@@ -9,6 +9,7 @@
 1. 图片水平滚动。
 2. 根据位置有缩放效果。
 3. 屏幕中间的图片会停到中间的位置。
+4. `UISegmentedControl`。
 
 ## Problem
 
@@ -35,5 +36,5 @@ override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionVi
 ```
 
 ## Reference
-
 - [swift实现卡片横向滑动效果](http://www.jianshu.com/p/0f31f0d64870)
+- [抓住iOS的未来 - 30天学习编写30个Swift小程序 - 27](http://www.jianshu.com/p/c6ae28964ad5)
