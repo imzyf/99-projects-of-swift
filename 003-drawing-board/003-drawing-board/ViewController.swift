@@ -19,14 +19,20 @@ class ViewController: UIViewController {
     @IBAction func saveImage(_ sender: UIButton) {
         
         let image = self.board.getImage()
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        
-        let alertController = UIAlertController(title: "保存成功", message: "", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-        
-        self.board.clearBoard()
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(finishSaveAlert(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func finishSaveAlert(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "The image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
     }
     
     @IBAction func clearDrawBoard(_ sender: UIButton) {

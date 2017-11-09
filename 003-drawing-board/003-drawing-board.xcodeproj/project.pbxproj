@@ -12,7 +12,6 @@
 		FD019E871F8F57230019F90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD019E851F8F57230019F90D /* Main.storyboard */; };
 		FD019E891F8F57230019F90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD019E881F8F57230019F90D /* Assets.xcassets */; };
 		FD019E8C1F8F57230019F90D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD019E8A1F8F57230019F90D /* LaunchScreen.storyboard */; };
-		FD019E941F8F68940019F90D /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD019E931F8F68940019F90D /* Line.swift */; };
 		FD019E961F8F6C720019F90D /* DrawingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD019E951F8F6C720019F90D /* DrawingBoard.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		FD019E881F8F57230019F90D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD019E8B1F8F57230019F90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD019E8D1F8F57230019F90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD019E931F8F68940019F90D /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		FD019E951F8F6C720019F90D /* DrawingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,13 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				FD019E811F8F57230019F90D /* AppDelegate.swift */,
+				FD019E831F8F57230019F90D /* ViewController.swift */,
+				FD019E951F8F6C720019F90D /* DrawingBoard.swift */,
 				FD019E851F8F57230019F90D /* Main.storyboard */,
 				FD019E881F8F57230019F90D /* Assets.xcassets */,
 				FD019E8A1F8F57230019F90D /* LaunchScreen.storyboard */,
 				FD019E8D1F8F57230019F90D /* Info.plist */,
-				FD019E831F8F57230019F90D /* ViewController.swift */,
-				FD019E951F8F6C720019F90D /* DrawingBoard.swift */,
-				FD019E931F8F68940019F90D /* Line.swift */,
 			);
 			path = "003-drawing-board";
 			sourceTree = "<group>";
@@ -142,7 +139,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD019E941F8F68940019F90D /* Line.swift in Sources */,
 				FD019E961F8F6C720019F90D /* DrawingBoard.swift in Sources */,
 				FD019E841F8F57230019F90D /* ViewController.swift in Sources */,
 				FD019E821F8F57230019F90D /* AppDelegate.swift in Sources */,

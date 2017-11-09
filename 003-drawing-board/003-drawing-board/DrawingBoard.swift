@@ -2,7 +2,7 @@ import UIKit
 
 class DrawingBoard: UIView {
     
-    var lineWidth: CGFloat = 2
+    var lineWidth: CGFloat = 3
     var pathColor: UIColor = .black
     
     //MARK: 保存线条
@@ -30,7 +30,7 @@ class DrawingBoard: UIView {
             let movedPoint = touch.location(in: self)
             
             // 创建直线
-            lines.append(Line(start: beganPoint, end: movedPoint, color: pathColor))
+            lines.append(Line(startPoint: beganPoint, endPoint: movedPoint, color: pathColor))
             // 移动后的点 = 下一次移动开始点
             beganPoint = movedPoint
         }
@@ -39,26 +39,13 @@ class DrawingBoard: UIView {
         self.setNeedsDisplay()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let endPoint = touch.location(in: self)
-            if endPoint == beganPoint {
-                // 创建直线
-                let tmp = CGPoint(x: beganPoint.x, y: beganPoint.y + lineWidth)
-                lines.append(Line(start: beganPoint, end: tmp, color: pathColor))
-            }
-        }
-        
-        super.touchesEnded(touches, with: event)
-        self.setNeedsDisplay()
-    }
-    
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-
+        
         // 设置中心十字 - 好像有的蠢
         let bounds = self.bounds
         context?.beginPath()
+        context?.setLineDash(phase: 10, lengths: [10])
         context?.move(to: CGPoint(x: bounds.maxX/2, y: 0))
         context?.addLine(to: CGPoint(x: bounds.maxX/2, y: bounds.maxY))
         
@@ -68,13 +55,19 @@ class DrawingBoard: UIView {
         context?.setStrokeColor(UIColor.gray.cgColor)
         context?.setLineWidth(0.2)
         context?.strokePath()
-
+        
+        // 取消 虚线
+        context?.setLineDash(phase: 0, lengths: [1])
+        
         // 重新内容
         for line in lines {
             context?.beginPath()
             context?.move(to: line.startPoint)
             context?.addLine(to: line.endPoint)
             context?.setStrokeColor(line.color.cgColor)
+            // 圆角更加自然
+            context?.setLineCap(.round)
+            context?.setLineJoin(.round)
             context?.setLineWidth(lineWidth)
             context?.strokePath()
         }
@@ -97,4 +90,12 @@ class DrawingBoard: UIView {
         
         return image
     }
+}
+
+struct Line {
+    
+    var startPoint: CGPoint
+    var endPoint: CGPoint
+    var color: UIColor
+    
 }
