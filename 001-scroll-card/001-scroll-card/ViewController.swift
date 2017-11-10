@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         customLayout.sectionInset = UIEdgeInsets(top: 0, left: SIDE_WIDTH, bottom: 0, right: SIDE_WIDTH)
         // 间距小一点，因为有水平的缩放。
         customLayout.minimumLineSpacing = 10
-       
+        
         // init collection
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
         collectionView.delegate = self
@@ -76,12 +76,12 @@ class ViewController: UIViewController {
     }
     
     @objc func segmentDidchange(sender: UISegmentedControl) {
-    
+        
         switch sender.selectedSegmentIndex {
-            case 1:
-                collectionView.collectionViewLayout = customLayout
-            default:
-                collectionView.collectionViewLayout = flowLayout
+        case 1:
+            collectionView.collectionViewLayout = customLayout
+        default:
+            collectionView.collectionViewLayout = flowLayout
         }
     } 
     
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: -- delegate and datasource
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource,
+extension ViewController: UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,17 +101,13 @@ UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomViewCell
+        cell.poster = dataSource[indexPath.row]
         
-        cell.buildCell(poster: dataSource[indexPath.row]) 
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 220, height: 360)
+        // 220 360 尺寸按比例
+        return CGSize(width: (SCREEN_HEIGHT*0.6/36*22), height: (SCREEN_HEIGHT*0.6))
     }
 }
-
-struct Poster {
-    let image: UIImage!
-}
-
