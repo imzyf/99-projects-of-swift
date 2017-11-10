@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		FD52D3321FB478000091FED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD52D3311FB478000091FED2 /* AppDelegate.swift */; };
-		FD52D3341FB478000091FED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD52D3331FB478000091FED2 /* ViewController.swift */; };
+		FD52D3341FB478000091FED2 /* ArtistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD52D3331FB478000091FED2 /* ArtistListViewController.swift */; };
 		FD52D3371FB478000091FED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD52D3351FB478000091FED2 /* Main.storyboard */; };
 		FD52D3391FB478000091FED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD52D3381FB478000091FED2 /* Assets.xcassets */; };
 		FD52D33C1FB478000091FED2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD52D33A1FB478000091FED2 /* LaunchScreen.storyboard */; };
+		FD8B9F931FB49AF9008F0801 /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = FD8B9F921FB49AF9008F0801 /* artists.json */; };
+		FD8B9F961FB49C5A008F0801 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B9F951FB49C5A008F0801 /* Artist.swift */; };
+		FD8B9FA21FB54604008F0801 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B9FA11FB54604008F0801 /* ArtistTableViewCell.swift */; };
+		FDF4AB071FB5791C005BBF41 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4AB061FB5791C005BBF41 /* ArtistDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD52D32E1FB478000091FED2 /* 017-self-sizing-table-view-cells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "017-self-sizing-table-view-cells.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD52D3311FB478000091FED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD52D3331FB478000091FED2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD52D3331FB478000091FED2 /* ArtistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewController.swift; sourceTree = "<group>"; };
 		FD52D3361FB478000091FED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD52D3381FB478000091FED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD52D33B1FB478000091FED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD52D33D1FB478000091FED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD8B9F921FB49AF9008F0801 /* artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
+		FD8B9F951FB49C5A008F0801 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		FD8B9FA11FB54604008F0801 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		FDF4AB061FB5791C005BBF41 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		FD52D3301FB478000091FED2 /* 017-self-sizing-table-view-cells */ = {
 			isa = PBXGroup;
 			children = (
+				FD8B9F9E1FB53444008F0801 /* controllers */,
+				FD8B9F941FB49C24008F0801 /* models */,
+				FD8B9FA01FB534ED008F0801 /* views */,
+				FD8B9F9F1FB53474008F0801 /* resourses */,
 				FD52D3311FB478000091FED2 /* AppDelegate.swift */,
-				FD52D3331FB478000091FED2 /* ViewController.swift */,
-				FD52D3351FB478000091FED2 /* Main.storyboard */,
 				FD52D3381FB478000091FED2 /* Assets.xcassets */,
 				FD52D33A1FB478000091FED2 /* LaunchScreen.storyboard */,
 				FD52D33D1FB478000091FED2 /* Info.plist */,
 			);
 			path = "017-self-sizing-table-view-cells";
+			sourceTree = "<group>";
+		};
+		FD8B9F941FB49C24008F0801 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FD8B9F951FB49C5A008F0801 /* Artist.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		FD8B9F9E1FB53444008F0801 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD52D3331FB478000091FED2 /* ArtistListViewController.swift */,
+				FDF4AB061FB5791C005BBF41 /* ArtistDetailViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		FD8B9F9F1FB53474008F0801 /* resourses */ = {
+			isa = PBXGroup;
+			children = (
+				FD8B9F921FB49AF9008F0801 /* artists.json */,
+			);
+			path = resourses;
+			sourceTree = "<group>";
+		};
+		FD8B9FA01FB534ED008F0801 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FD52D3351FB478000091FED2 /* Main.storyboard */,
+				FD8B9FA11FB54604008F0801 /* ArtistTableViewCell.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD52D33C1FB478000091FED2 /* LaunchScreen.storyboard in Resources */,
+				FD8B9F931FB49AF9008F0801 /* artists.json in Resources */,
 				FD52D3391FB478000091FED2 /* Assets.xcassets in Resources */,
 				FD52D3371FB478000091FED2 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD52D3341FB478000091FED2 /* ViewController.swift in Sources */,
+				FD8B9F961FB49C5A008F0801 /* Artist.swift in Sources */,
+				FD52D3341FB478000091FED2 /* ArtistListViewController.swift in Sources */,
+				FDF4AB071FB5791C005BBF41 /* ArtistDetailViewController.swift in Sources */,
+				FD8B9FA21FB54604008F0801 /* ArtistTableViewCell.swift in Sources */,
 				FD52D3321FB478000091FED2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DM78HJ4CZ6;
 				INFOPLIST_FILE = "017-self-sizing-table-view-cells/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-17-self-sizing-table-view-cells";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DM78HJ4CZ6;
 				INFOPLIST_FILE = "017-self-sizing-table-view-cells/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-17-self-sizing-table-view-cells";
 				PRODUCT_NAME = "$(TARGET_NAME)";
