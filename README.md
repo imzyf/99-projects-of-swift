@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [017 Self-sizing Table View Cells](./017-self-sizing-table-view-cells)
+自身内容决定的大小 TableViewCells。
+
+<img src="./017-self-sizing-table-view-cells/017-demo.gif" alt="Self-sizing Table View Cells - demo" width="200" />
+
 ## [016 Moya Simple](./016-moya-simple)
 Moya 小例。
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Artist: Codable {
+class Artist: Codable {
     var name: String
     var bio: String
     var image: String
@@ -35,11 +35,14 @@ struct Artist: Codable {
     }
 }
 
-struct Work: Codable {
+class Work: Codable {
     var title: String
     var image: String
     var info: String
-    var isExpanded: Bool?
+    var isExpanded: Bool = false
     
+    private enum CodingKeys: String, CodingKey {
+        case title, image, info
+    }
 }
 

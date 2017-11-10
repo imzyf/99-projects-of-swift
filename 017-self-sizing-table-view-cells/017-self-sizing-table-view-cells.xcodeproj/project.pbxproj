@@ -16,6 +16,7 @@
 		FD8B9F961FB49C5A008F0801 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B9F951FB49C5A008F0801 /* Artist.swift */; };
 		FD8B9FA21FB54604008F0801 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B9FA11FB54604008F0801 /* ArtistTableViewCell.swift */; };
 		FDF4AB071FB5791C005BBF41 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4AB061FB5791C005BBF41 /* ArtistDetailViewController.swift */; };
+		FDF4AB091FB57C9C005BBF41 /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4AB081FB57C9C005BBF41 /* WorkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FD8B9F951FB49C5A008F0801 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		FD8B9FA11FB54604008F0801 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		FDF4AB061FB5791C005BBF41 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
+		FDF4AB081FB57C9C005BBF41 /* WorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				FD52D3351FB478000091FED2 /* Main.storyboard */,
 				FD8B9FA11FB54604008F0801 /* ArtistTableViewCell.swift */,
+				FDF4AB081FB57C9C005BBF41 /* WorkTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				FD52D3341FB478000091FED2 /* ArtistListViewController.swift in Sources */,
 				FDF4AB071FB5791C005BBF41 /* ArtistDetailViewController.swift in Sources */,
 				FD8B9FA21FB54604008F0801 /* ArtistTableViewCell.swift in Sources */,
+				FDF4AB091FB57C9C005BBF41 /* WorkTableViewCell.swift in Sources */,
 				FD52D3321FB478000091FED2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

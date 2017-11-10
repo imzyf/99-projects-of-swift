@@ -21,9 +21,6 @@ class ArtistTableViewCell: UITableViewCell {
         self.nameLabel.backgroundColor = UIColor(red: 1, green: 152 / 255, blue: 0, alpha: 1)
         self.nameLabel.layer.cornerRadius = 3
         self.nameLabel.clipsToBounds = true
-        self.bioLabel.textColor = UIColor(white: 114/255, alpha: 1)
-        
-        self.nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        self.bioLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        self.bioLabel.textColor = UIColor(white: 114/255, alpha: 1) 
     }
 }

@@ -22,7 +22,11 @@ class ArtistListViewController: UIViewController {
         
         // bug: 在 ib 中设置此属性有问题，always big
         navigationController?.navigationBar.prefersLargeTitles = true
-     
+        
+        // 监听 Larger Text Accessibility feature
+        NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: .none, queue: OperationQueue.main) { [weak self] _ in
+            self?.tableView.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +56,9 @@ extension ArtistListViewController: UITableViewDataSource {
         cell.artistImageView.image = UIImage(named: artist.image)
         cell.nameLabel.text = artist.name
         cell.bioLabel.text = artist.bio
+        
+        cell.nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        cell.bioLabel.font = UIFont.preferredFont(forTextStyle: .body)
         
         return cell
     }
