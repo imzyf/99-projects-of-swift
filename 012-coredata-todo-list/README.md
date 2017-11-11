@@ -14,3 +14,4 @@
 ## Reference
 - [抓住iOS的未来 - 30天学习编写30个Swift小程序 - 21](http://www.jianshu.com/p/c6ae28964ad5)
 - [Swift 3.0 使用Core Data](http://www.cnblogs.com/Free-Thinker/p/5944551.html)
+- [Getting Started with Core Data Tutorial](https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2)
