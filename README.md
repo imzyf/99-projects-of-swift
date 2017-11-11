@@ -33,7 +33,7 @@ Moya 小例。
 ## [012 CoreData TODO List](./012-coredata-todo-list)
 使用 CoreData 的 TODO 列表。
 
-<img src="./012-coredata-todo-list/012-demo.gif" alt="CoreData TODO List - demo" width="200" />
+<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fle5678mo0g308h0ewdqt.gif" alt="CoreData TODO List - demo" width="200" />
 
 ## [011 Video Player](./011-video-player)
 视频播放。

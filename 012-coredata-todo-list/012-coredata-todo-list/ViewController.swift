@@ -9,44 +9,31 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController,
-UITableViewDelegate, UITableViewDataSource {
- 
+class ViewController: UIViewController {
+    
     @IBOutlet weak var todoTableView: UITableView!
- 
-    var datas = [TodoItem]()
+    
+    var todoItems = [TodoItem]()
     let entityName = "TodoItem"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        todoTableView.delegate = self
-        todoTableView.dataSource = self
-        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.getAllTodoItems()
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "item")
-        
-        let data = datas[indexPath.row]
-        cell.textLabel?.text = "\(data.id) - \(data.title!)" 
-        cell.detailTextLabel?.text = data.subTitle
-        
-        return cell
-    }
     
-    @IBAction func addTodoItem() {
+    @IBAction func addTodoItem(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "New Todo Item", message: "", preferredStyle:.alert)
-  
+        
         // add action
-        alertController.addAction(UIAlertAction(title: "Add", style: .default) { (_) in
+        alertController.addAction(UIAlertAction(title: "Add", style: .default) {
+            [unowned self] action in
+            
             if let fields = alertController.textFields  {
                 self.storeItem(title: fields[0].text!, subTitle: fields[1].text!)
+                
                 self.getAllTodoItems()
                 self.todoTableView.reloadData()
             }
@@ -61,7 +48,7 @@ UITableViewDelegate, UITableViewDataSource {
             textField.placeholder = "Todo Item SubTitle"
         }
         
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true)
     }
     
     // MARK:- CoreData
@@ -71,15 +58,18 @@ UITableViewDelegate, UITableViewDataSource {
     }
     
     func storeItem(title:String, subTitle:String) {
+        // 1
         let context = getContext()
-        // 定义一个entity，这个entity一定要在xcdatamodeld中做好定义
-        let entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
         
+        // 2 定义一个entity，这个entity一定要在xcdatamodeld中做好定义
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
         let item = NSManagedObject(entity: entity!, insertInto: context)
+        
+        // 3
         item.setValue(title, forKey: "title")
         item.setValue(subTitle, forKey: "subTitle")
         item.setValue(ViewController.nextChecklistItemID(), forKey: "id")
-      
+        
         do {
             try context.save()
             print("saved")
@@ -88,14 +78,27 @@ UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func deleteItem(forRowAt indexPath: IndexPath) {
+        // 1
+        let context = getContext()
+        context.delete(todoItems[indexPath.row] as NSManagedObject)
+        
+        do {
+            try context.save()
+            self.todoItems.remove(at: indexPath.row)
+            self.todoTableView.deleteRows(at: [indexPath], with: .fade)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
     // 获取某一entity的所有数据
     func getAllTodoItems() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         do {
-            let searchResults = try getContext().fetch(fetchRequest)
-            datas = searchResults as! [TodoItem]
-        } catch  {
-            print(error)
+            todoItems = try getContext().fetch(fetchRequest) as! [TodoItem]
+        } catch {
+            print("Could not fetch. \(error)")
         }
     }
     
@@ -106,12 +109,37 @@ UITableViewDelegate, UITableViewDataSource {
         userDefaults.synchronize()
         return itemID
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+ 
 }
 
+// MARK: - UITableViewDataSource
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return todoItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let data = todoItems[indexPath.row]
+        cell.textLabel?.text = "\(data.id) - \(data.title!)"
+        cell.detailTextLabel?.text = data.subTitle
+        
+        return cell
+    } 
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        switch editingStyle {
+        case .delete:
+            self.deleteItem(forRowAt: indexPath)
+        default:
+            return
+        }
+    }
+}
