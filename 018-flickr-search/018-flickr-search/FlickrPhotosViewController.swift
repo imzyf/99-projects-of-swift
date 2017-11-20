@@ -12,24 +12,15 @@ private let reuseIdentifier = "FlickrCell"
 
 class FlickrPhotosViewController: UICollectionViewController {
     
-    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    fileprivate let sectionInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     fileprivate var searches = [FlickrSearchResults]()
     fileprivate let flickr = Flickr()
+    fileprivate let itemsPerRow: CGFloat = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
-
- 
- 
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -48,10 +39,11 @@ extension FlickrPhotosViewController {
     //3
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                      for: indexPath)
-        cell.backgroundColor = UIColor.black
-        // Configure the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlickrPhotoCell
+        let flickrPhoto = photoForIndexPath(indexPath: indexPath)
+        cell.backgroundColor = UIColor.white
+        cell.imageView.image = flickrPhoto.thumbnail
+        
         return cell
     }
 }
@@ -74,9 +66,7 @@ extension FlickrPhotosViewController : UITextFieldDelegate {
         flickr.searchFlickrForTerm(textField.text!) {
             results, error in
             
-            
             activityIndicator.removeFromSuperview()
-            
             
             if let error = error {
                 // 2
@@ -97,5 +87,38 @@ extension FlickrPhotosViewController : UITextFieldDelegate {
         textField.text = nil
         textField.resignFirstResponder()
         return true
+    }
+}
+
+// MARK: - Layout
+extension FlickrPhotosViewController : UICollectionViewDelegateFlowLayout {
+    //1
+    func collectionView(_ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 }
