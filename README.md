@@ -8,7 +8,7 @@
 ## [019 Twitter Bird](./019-twitter-bird)
 启动遮罩。
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1flmehqvu45g308i0eyqd9.gif" alt="Self-sizing Table View Cells" width="200" />
+<img src="https://ws2.sinaimg.cn/large/006tNc79ly1flod0tdh90g308i0eydr7.gif" alt="Twitter Bird" width="200" />
 
 ## [018 Flickr Search](./018-flickr-search)
 

@@ -2,7 +2,7 @@
 
 ## Demo
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1flmehqvu45g308i0eyqd9.gif" alt="Self-sizing Table View Cells" width="300" />
+<img src="https://ws2.sinaimg.cn/large/006tNc79ly1flod0tdh90g308i0eydr7.gif" alt="Twitter Bird" width="300" />
 
 ## Introduction
 启动遮罩。
