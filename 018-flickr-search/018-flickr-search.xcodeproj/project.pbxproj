@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD3AA4F11FC2AD310063ABA3 /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3AA4F01FC2AD310063ABA3 /* FlickrPhotoCell.swift */; };
+		FD3AA4F31FC2B50E0063ABA3 /* FlickrPhotoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3AA4F21FC2B50E0063ABA3 /* FlickrPhotoHeaderView.swift */; };
 		FDF4AB191FB6E6E4005BBF41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4AB181FB6E6E4005BBF41 /* AppDelegate.swift */; };
 		FDF4AB1E1FB6E6E4005BBF41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF4AB1C1FB6E6E4005BBF41 /* Main.storyboard */; };
 		FDF4AB201FB6E6E4005BBF41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF4AB1F1FB6E6E4005BBF41 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		FD3AA4F01FC2AD310063ABA3 /* FlickrPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoCell.swift; sourceTree = "<group>"; };
+		FD3AA4F21FC2B50E0063ABA3 /* FlickrPhotoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoHeaderView.swift; sourceTree = "<group>"; };
 		FDF4AB151FB6E6E4005BBF41 /* 018-flickr-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "018-flickr-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF4AB181FB6E6E4005BBF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF4AB1D1FB6E6E4005BBF41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				FDF4AB181FB6E6E4005BBF41 /* AppDelegate.swift */,
 				FDF4AB2B1FB6E868005BBF41 /* FlickrPhotosViewController.swift */,
 				FD3AA4F01FC2AD310063ABA3 /* FlickrPhotoCell.swift */,
+				FD3AA4F21FC2B50E0063ABA3 /* FlickrPhotoHeaderView.swift */,
 				FDF4AB1C1FB6E6E4005BBF41 /* Main.storyboard */,
 				FDF4AB341FB6EB3B005BBF41 /* FilckrModel */,
 				FDF4AB1F1FB6E6E4005BBF41 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				FDF4AB311FB6E97F005BBF41 /* FlickrPhoto.swift in Sources */,
 				FDF4AB301FB6E97F005BBF41 /* Flickr.swift in Sources */,
 				FDF4AB191FB6E6E4005BBF41 /* AppDelegate.swift in Sources */,
+				FD3AA4F31FC2B50E0063ABA3 /* FlickrPhotoHeaderView.swift in Sources */,
 				FD3AA4F11FC2AD310063ABA3 /* FlickrPhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

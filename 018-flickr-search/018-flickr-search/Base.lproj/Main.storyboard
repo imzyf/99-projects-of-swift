@@ -19,13 +19,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y6i-Y8-DDx">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="wGZ-sE-Ilu" customClass="FlickrPhotoCell" customModule="_18_flickr_search" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="50" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -34,19 +34,45 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YnJ-GH-Wlw">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GVd-yO-gys">
+                                            <rect key="frame" x="82" y="82" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YnJ-GH-Wlw" secondAttribute="bottom" id="LAV-QH-Ozd"/>
                                     <constraint firstAttribute="trailing" secondItem="YnJ-GH-Wlw" secondAttribute="trailing" id="Sw3-bq-48w"/>
+                                    <constraint firstItem="GVd-yO-gys" firstAttribute="centerY" secondItem="wGZ-sE-Ilu" secondAttribute="centerY" id="caX-Sc-WcO"/>
                                     <constraint firstItem="YnJ-GH-Wlw" firstAttribute="top" secondItem="wGZ-sE-Ilu" secondAttribute="top" id="kT0-Sd-7G7"/>
+                                    <constraint firstItem="GVd-yO-gys" firstAttribute="centerX" secondItem="wGZ-sE-Ilu" secondAttribute="centerX" id="poV-Ue-jl8"/>
                                     <constraint firstItem="YnJ-GH-Wlw" firstAttribute="leading" secondItem="wGZ-sE-Ilu" secondAttribute="leading" id="wsx-Ew-Hpv"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="GVd-yO-gys" id="Dlt-w5-LDh"/>
                                     <outlet property="imageView" destination="YnJ-GH-Wlw" id="IJv-E9-OF0"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="FlickrPhotoHeaderView" id="CmP-fg-ZQ9" customClass="FlickrPhotoHeaderView" customModule="_18_flickr_search" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-sv-1DC">
+                                    <rect key="frame" x="150" y="6" width="75.5" height="38.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="8gB-sv-1DC" firstAttribute="centerY" secondItem="CmP-fg-ZQ9" secondAttribute="centerY" id="CYY-gi-Mt5"/>
+                                <constraint firstItem="8gB-sv-1DC" firstAttribute="centerX" secondItem="CmP-fg-ZQ9" secondAttribute="centerX" id="ZSX-9P-enj"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="8gB-sv-1DC" id="QNA-5v-b6z"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="NIH-fT-mBk" id="cCf-E2-vXV"/>
                             <outlet property="delegate" destination="NIH-fT-mBk" id="Lqj-PV-NGK"/>
