@@ -11,7 +11,9 @@
 <img src="https://ws2.sinaimg.cn/large/006tNc79ly1flod0tdh90g308i0eydr7.gif" alt="Twitter Bird" width="200" />
 
 ## [018 Flickr Search](./018-flickr-search)
+Flickr 搜索器。
 
+<img src="https://ws4.sinaimg.cn/large/006tNc79ly1florfhi9d3g308i0eyhdz.gif" alt="Flickr Search" width="200" />
 
 ## [017 Self-sizing Table View Cells](./017-self-sizing-table-view-cells)
 自身内容决定的大小 TableViewCells。

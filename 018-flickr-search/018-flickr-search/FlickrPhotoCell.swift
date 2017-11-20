@@ -26,4 +26,5 @@ class FlickrPhotoCell: UICollectionViewCell {
         imageView.layer.borderColor = themeColor.cgColor
         isSelected = false
     }
+ 
 }
