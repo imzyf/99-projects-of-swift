@@ -13,7 +13,7 @@
 ## [018 Flickr Search](./018-flickr-search)
 Flickr 搜索器。
 
-<img src="https://ws4.sinaimg.cn/large/006tNc79ly1florfhi9d3g308i0eyhdz.gif" alt="Flickr Search" width="200" />
+<img src="http://7xs09x.com1.z0.glb.clouddn.com/018-demo.gif" alt="Flickr Search" width="200" />
 
 ## [017 Self-sizing Table View Cells](./017-self-sizing-table-view-cells)
 自身内容决定的大小 TableViewCells。

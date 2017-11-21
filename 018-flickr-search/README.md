@@ -2,7 +2,7 @@
 
 ## Demo
 
-<img src="https://ws4.sinaimg.cn/large/006tNc79ly1florfhi9d3g308i0eyhdz.gif" alt="Flickr Search" width="300" />
+<img src="http://7xs09x.com1.z0.glb.clouddn.com/018-demo.gif" alt="Flickr Search" width="300" />
 
 ## Explanation
 Flickr 搜索器。
