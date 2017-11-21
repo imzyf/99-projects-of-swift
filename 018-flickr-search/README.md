@@ -2,9 +2,9 @@
 
 ## Demo
 
-<img src="http://7xs09x.com1.z0.glb.clouddn.com/018-demo.gif" alt="Flickr Search" width="300" />
+<img src="https://user-images.githubusercontent.com/9289792/33071145-5b7e56ea-cef5-11e7-9c34-b3d1f6c2fdec.gif" alt="Flickr Search" width="300" />
 
-## Explanation
+## Introduction
 Flickr 搜索器。
 
 ## Notice

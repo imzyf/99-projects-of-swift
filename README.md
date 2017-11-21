@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [020 Pinterest](./020-pinterest)
+类 Pinterest 流式布局。
+
+<img src="https://user-images.githubusercontent.com/9289792/33071222-a6a17a26-cef5-11e7-8f56-27c53d3d8a64.gif" alt="Pinterest" width="200" />
+
 ## [019 Twitter Bird](./019-twitter-bird)
 启动遮罩。
 
@@ -13,7 +18,7 @@
 ## [018 Flickr Search](./018-flickr-search)
 Flickr 搜索器。
 
-<img src="http://7xs09x.com1.z0.glb.clouddn.com/018-demo.gif" alt="Flickr Search" width="200" />
+<img src="https://user-images.githubusercontent.com/9289792/33071145-5b7e56ea-cef5-11e7-9c34-b3d1f6c2fdec.gif" alt="Flickr Search" width="200" />
 
 ## [017 Self-sizing Table View Cells](./017-self-sizing-table-view-cells)
 自身内容决定的大小 TableViewCells。
