@@ -34,6 +34,7 @@
 		FDDBECC91FC69A880050A97D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBECC81FC69A880050A97D /* FeedViewController.swift */; };
 		FDDBECCB1FC6A3610050A97D /* JournalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBECCA1FC6A3610050A97D /* JournalSectionController.swift */; };
 		FDDBECCD1FC6A9240050A97D /* MessageSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBECCC1FC6A9240050A97D /* MessageSectionController.swift */; };
+		FDDBECCF1FC6AA910050A97D /* WeatherSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBECCE1FC6AA910050A97D /* WeatherSectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		FDDBECC81FC69A880050A97D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FDDBECCA1FC6A3610050A97D /* JournalSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalSectionController.swift; sourceTree = "<group>"; };
 		FDDBECCC1FC6A9240050A97D /* MessageSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSectionController.swift; sourceTree = "<group>"; };
+		FDDBECCE1FC6AA910050A97D /* WeatherSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,9 @@
 		29E2CDC41DC7B4CF00A9E0F4 /* SectionControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDDBECCA1FC6A3610050A97D /* JournalSectionController.swift */,
+				FDDBECCC1FC6A9240050A97D /* MessageSectionController.swift */,
+				FDDBECCE1FC6AA910050A97D /* WeatherSectionController.swift */,
 			);
 			name = SectionControllers;
 			path = Marslink/SectionControllers;
@@ -167,8 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				FDDBECC81FC69A880050A97D /* FeedViewController.swift */,
-				FDDBECCA1FC6A3610050A97D /* JournalSectionController.swift */,
-				FDDBECCC1FC6A9240050A97D /* MessageSectionController.swift */,
 				29E2CDCF1DC7B4CF00A9E0F4 /* ClassicFeedViewController.swift */,
 			);
 			name = ViewControllers;
@@ -355,6 +358,7 @@
 				29E2CDED1DC7B4CF00A9E0F4 /* CustomNavigationBar.swift in Sources */,
 				FDDBECCD1FC6A9240050A97D /* MessageSectionController.swift in Sources */,
 				29E2CDDA1DC7B4CF00A9E0F4 /* DateSortable.swift in Sources */,
+				FDDBECCF1FC6AA910050A97D /* WeatherSectionController.swift in Sources */,
 				29E2CDDF1DC7B4CF00A9E0F4 /* Weather.swift in Sources */,
 				29E2CDE91DC7B4CF00A9E0F4 /* Theme.swift in Sources */,
 				29E2CDEB1DC7B4CF00A9E0F4 /* ClassicFeedViewController.swift in Sources */,

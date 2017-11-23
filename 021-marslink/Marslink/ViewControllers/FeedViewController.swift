@@ -11,10 +11,11 @@ import IGListKit
 
 class FeedViewController: UIViewController {
     let loader = JournalEntryLoader()
-    
-    
+ 
     // acts as messaging system
     let pathfinder = Pathfinder()
+    
+    let wxScanner = WxScanner()
  
     let collectionView: IGListCollectionView = {
         let view = IGListCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout()) 
@@ -46,15 +47,24 @@ class FeedViewController: UIViewController {
 extension FeedViewController: IGListAdapterDataSource {
     // returns an array of data objects the should show up in the collection view.
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        var items: [IGListDiffable] = pathfinder.messages
+        var items: [IGListDiffable] = [wxScanner.currentWeather]
         items += loader.entries as [IGListDiffable]
-        return items
+        items += pathfinder.messages as [IGListDiffable]
+        
+        return items.sorted(by: { (left: Any, right: Any) -> Bool in
+            if let left = left as? DateSortable, let right = right as? DateSortable {
+                return left.date > right.date
+            }
+            return false
+        }) 
     }
     
     // for each data object, must return a new instance of a section controller.
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
         if object is Message {
             return MessageSectionController()
+        } else if object is Weather {
+            return WeatherSectionController()
         } else {
             return JournalSectionController()
         }
