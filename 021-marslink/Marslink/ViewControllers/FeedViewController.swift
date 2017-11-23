@@ -11,6 +11,10 @@ import IGListKit
 
 class FeedViewController: UIViewController {
     let loader = JournalEntryLoader()
+    
+    
+    // acts as messaging system
+    let pathfinder = Pathfinder()
  
     let collectionView: IGListCollectionView = {
         let view = IGListCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout()) 
@@ -42,12 +46,18 @@ class FeedViewController: UIViewController {
 extension FeedViewController: IGListAdapterDataSource {
     // returns an array of data objects the should show up in the collection view.
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        return loader.entries
+        var items: [IGListDiffable] = pathfinder.messages
+        items += loader.entries as [IGListDiffable]
+        return items
     }
     
     // for each data object, must return a new instance of a section controller.
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
-        return JournalSectionController()
+        if object is Message {
+            return MessageSectionController()
+        } else {
+            return JournalSectionController()
+        }
     }
     
     // returns a view that should be displayed when the list is empty
