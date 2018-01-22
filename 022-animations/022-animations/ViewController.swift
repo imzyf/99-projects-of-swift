@@ -13,21 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     fileprivate let items = ["2-Color", "Simple 2D Rotation", "Multicolor", "Multi Point Position", "BezierCurve Position", "Color and Frame Change", "View Fade In", "Pop"]
-    
-    let cellHeight:CGFloat = 60
+ 
+    let cellHeight: CGFloat = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        self.tableView.rowHeight = 50
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableAnimate()
     }
-    
-    
+
     func tableAnimate() {
         tableView.reloadData()
         
