@@ -12,6 +12,7 @@
 		FDE3815520163621009C3BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE3815320163621009C3BBB /* Main.storyboard */; };
 		FDE3815720163621009C3BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE3815620163621009C3BBB /* Assets.xcassets */; };
 		FDE3815A20163621009C3BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE3815820163621009C3BBB /* LaunchScreen.storyboard */; };
+		FDE3816220163A4F009C3BBB /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3816120163A4F009C3BBB /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FDE3815620163621009C3BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE3815920163621009C3BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDE3815B20163621009C3BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE3816120163A4F009C3BBB /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FDE3814F20163621009C3BBB /* AppDelegate.swift */,
 				FDE3815120163621009C3BBB /* ViewController.swift */,
+				FDE3816120163A4F009C3BBB /* TodoModel.swift */,
 				FDE3815320163621009C3BBB /* Main.storyboard */,
 				FDE3815620163621009C3BBB /* Assets.xcassets */,
 				FDE3815820163621009C3BBB /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE3816220163A4F009C3BBB /* TodoModel.swift in Sources */,
 				FDE3815220163621009C3BBB /* ViewController.swift in Sources */,
 				FDE3815020163621009C3BBB /* AppDelegate.swift in Sources */,
 			);
@@ -275,6 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G79JFKF86J;
 				INFOPLIST_FILE = "023-todo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-23-todo";
@@ -289,6 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G79JFKF86J;
 				INFOPLIST_FILE = "023-todo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-23-todo";
