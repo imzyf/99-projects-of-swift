@@ -5,6 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+## [024 3D Touch Quick Action](./024-3d-touch-quick-action)
+3D Touch 快速启动。
+
+<img src="https://user-images.githubusercontent.com/9289792/36056810-a3ddc3ee-0e42-11e8-8db8-744859d3749e.gif" alt="3D Touch Quick Action" width="200" />
+
 ## [021 Marslink](./021-marslink)
 [IGListKit](https://github.com/Instagram/IGListKit) Tutorial.
 

@@ -7,19 +7,49 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var actionImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // 注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(shortCutActionClicked(sender:)), name: Notification.Name(rawValue: "ShortcutAction"), object: nil)
+        registerForPreviewing(with: self, sourceView: view)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func shortCutActionClicked(sender: Notification) {
+        if let shortcutItem = sender.userInfo?["shortcutItem"] as? UIApplicationShortcutItem, shortcutItem.type == "LoveItem" {
+            actionLabel.text = "Yes, I do ❤️ you!"
+        }
     }
+}
 
+extension ViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        return SFSafariViewController(url: URL(string: "https://zyf.im")!)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
+}
 
+extension SFSafariViewController {
+    
+    // 重新下部按钮
+    open override var previewActionItems: [UIPreviewActionItem] {
+        let deleteAction = UIPreviewAction(title: "删除", style: .destructive) { (previewAction, vc) in
+            print("Delete")
+        }
+        let doneAction = UIPreviewAction(title: "完成", style: .default) { (previewAction, vc) in
+            print("Done")
+        }
+        return [deleteAction, doneAction]
+    }
 }
 
