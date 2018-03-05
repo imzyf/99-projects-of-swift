@@ -13,6 +13,7 @@
 		FD73AFD3204D60650039F34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD73AFD1204D60650039F34B /* Main.storyboard */; };
 		FD73AFD5204D60650039F34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD73AFD4204D60650039F34B /* Assets.xcassets */; };
 		FD73AFD8204D60650039F34B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD73AFD6204D60650039F34B /* LaunchScreen.storyboard */; };
+		FD73AFE0204D63340039F34B /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73AFDF204D63340039F34B /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FD73AFD4204D60650039F34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD73AFD7204D60650039F34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD73AFD9204D60650039F34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD73AFDF204D63340039F34B /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				FD73AFD4204D60650039F34B /* Assets.xcassets */,
 				FD73AFD6204D60650039F34B /* LaunchScreen.storyboard */,
 				FD73AFD9204D60650039F34B /* Info.plist */,
+				FD73AFDF204D63340039F34B /* Music.swift */,
 			);
 			path = "025-rxswift";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				FD73AFD0204D60650039F34B /* ViewController.swift in Sources */,
 				FD73AFCE204D60650039F34B /* AppDelegate.swift in Sources */,
+				FD73AFE0204D63340039F34B /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
