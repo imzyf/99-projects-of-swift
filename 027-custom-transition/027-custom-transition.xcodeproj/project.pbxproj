@@ -12,6 +12,9 @@
 		FDE95BEB2057B23A00AFAE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE95BE92057B23A00AFAE18 /* Main.storyboard */; };
 		FDE95BED2057B23A00AFAE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE95BEC2057B23A00AFAE18 /* Assets.xcassets */; };
 		FDE95BF02057B23A00AFAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE95BEE2057B23A00AFAE18 /* LaunchScreen.storyboard */; };
+		FDE95BF92057B69E00AFAE18 /* CustomPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE95BF82057B69E00AFAE18 /* CustomPushTransition.swift */; };
+		FDE95BFB2057B76000AFAE18 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE95BFA2057B76000AFAE18 /* DetailViewController.swift */; };
+		FDE95BFD2057C04D00AFAE18 /* CustomPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE95BFC2057C04D00AFAE18 /* CustomPopTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		FDE95BEC2057B23A00AFAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE95BEF2057B23A00AFAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDE95BF12057B23A00AFAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE95BF82057B69E00AFAE18 /* CustomPushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushTransition.swift; sourceTree = "<group>"; };
+		FDE95BFA2057B76000AFAE18 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FDE95BFC2057C04D00AFAE18 /* CustomPopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		FDE95BE42057B23A00AFAE18 /* 027-custom-transition */ = {
 			isa = PBXGroup;
 			children = (
+				FDE95BF72057B68000AFAE18 /* Transition */,
 				FDE95BE52057B23A00AFAE18 /* AppDelegate.swift */,
 				FDE95BE72057B23A00AFAE18 /* ViewController.swift */,
+				FDE95BFA2057B76000AFAE18 /* DetailViewController.swift */,
 				FDE95BE92057B23A00AFAE18 /* Main.storyboard */,
 				FDE95BEC2057B23A00AFAE18 /* Assets.xcassets */,
 				FDE95BEE2057B23A00AFAE18 /* LaunchScreen.storyboard */,
 				FDE95BF12057B23A00AFAE18 /* Info.plist */,
 			);
 			path = "027-custom-transition";
+			sourceTree = "<group>";
+		};
+		FDE95BF72057B68000AFAE18 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				FDE95BF82057B69E00AFAE18 /* CustomPushTransition.swift */,
+				FDE95BFC2057C04D00AFAE18 /* CustomPopTransition.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +155,9 @@
 			files = (
 				FDE95BE82057B23A00AFAE18 /* ViewController.swift in Sources */,
 				FDE95BE62057B23A00AFAE18 /* AppDelegate.swift in Sources */,
+				FDE95BFD2057C04D00AFAE18 /* CustomPopTransition.swift in Sources */,
+				FDE95BF92057B69E00AFAE18 /* CustomPushTransition.swift in Sources */,
+				FDE95BFB2057B76000AFAE18 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G79JFKF86J;
 				INFOPLIST_FILE = "027-custom-transition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-27-custom-transition";
@@ -289,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G79JFKF86J;
 				INFOPLIST_FILE = "027-custom-transition/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-27-custom-transition";
