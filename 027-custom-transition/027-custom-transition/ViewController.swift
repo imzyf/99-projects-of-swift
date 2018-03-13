@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         navigationController?.delegate = self
     }
 }
@@ -29,7 +32,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-         return cell
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -43,8 +46,6 @@ extension ViewController: UINavigationControllerDelegate {
         switch operation {
         case .push:
             return CustomPushTransition()
-        case .pop:
-            return CustomPopTransition()
         default:
             return nil
         }
