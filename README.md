@@ -5,11 +5,11 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
-## [027 Custom Transition](./027-coustom-transition)
+## [027 Custom Transition](./027-custom-transition)
 
 自定义页面切换动画。
 
-<img src="https://user-images.githubusercontent.com/9289792/37338118-6abe4efe-26f1-11e8-951d-1179d221e08a.gif" alt="Custom Transition" width="300" />
+<img src="https://user-images.githubusercontent.com/9289792/37338118-6abe4efe-26f1-11e8-951d-1179d221e08a.gif" alt="Custom Transition" width="200" />
 
 ## [025 RxSwift](./025-rxswift)
 
