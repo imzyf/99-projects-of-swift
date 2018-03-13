@@ -27,6 +27,7 @@ class CustomPushTransition: NSObject, UIViewControllerAnimatedTransitioning {
             toVC.view.frame = transitionContext.finalFrame(for: toVC)
             toVC.view.alpha = 0
             toVC.imageView.isHidden = true
+            fromImageView.isHidden = true
             
             containerView.addSubview(toVC.view)
             containerView.addSubview(snapshotView!)
@@ -37,6 +38,7 @@ class CustomPushTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 toVC.view.alpha = 1
             }) { (finish) in
                 toVC.imageView.isHidden = false
+                fromImageView.isHidden = false
                 snapshotView?.removeFromSuperview()
                 // 告诉系统你的动画过程已经结束，这是非常重要的方法，必须调用。
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
