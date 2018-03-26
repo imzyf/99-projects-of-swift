@@ -5,6 +5,8 @@
 
 模仿 [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) 的 Swift 学习项目。项目目录倒序排列。
 
+每个文件夹都是独立的项目，可以使用此链接 [DownGit](https://minhaskamal.github.io/DownGit/#/home) 单独下载某个文件夹。
+
 ## [027 Custom Transition](./027-custom-transition)
 
 自定义页面切换动画。
