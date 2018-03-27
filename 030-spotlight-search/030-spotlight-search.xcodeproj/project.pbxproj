@@ -12,6 +12,8 @@
 		FD0D5B1D206A43A100F499EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0D5B1B206A43A100F499EE /* Main.storyboard */; };
 		FD0D5B1F206A43A100F499EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0D5B1E206A43A100F499EE /* Assets.xcassets */; };
 		FD0D5B22206A43A100F499EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0D5B20206A43A100F499EE /* LaunchScreen.storyboard */; };
+		FD0D5B2B206A489600F499EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B29206A489600F499EE /* DetailViewController.swift */; };
+		FD0D5B2E206A48F900F499EE /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0D5B2D206A48F900F499EE /* Detail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FD0D5B1E206A43A100F499EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD0D5B21206A43A100F499EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD0D5B23206A43A100F499EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD0D5B29206A489600F499EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FD0D5B2D206A48F900F499EE /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				FD0D5B1E206A43A100F499EE /* Assets.xcassets */,
 				FD0D5B20206A43A100F499EE /* LaunchScreen.storyboard */,
 				FD0D5B23206A43A100F499EE /* Info.plist */,
+				FD0D5B29206A489600F499EE /* DetailViewController.swift */,
+				FD0D5B2D206A48F900F499EE /* Detail.storyboard */,
 			);
 			path = "030-spotlight-search";
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 				FD0D5B22206A43A100F499EE /* LaunchScreen.storyboard in Resources */,
 				FD0D5B1F206A43A100F499EE /* Assets.xcassets in Resources */,
 				FD0D5B1D206A43A100F499EE /* Main.storyboard in Resources */,
+				FD0D5B2E206A48F900F499EE /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0D5B2B206A489600F499EE /* DetailViewController.swift in Sources */,
 				FD0D5B1A206A43A100F499EE /* ViewController.swift in Sources */,
 				FD0D5B18206A43A100F499EE /* AppDelegate.swift in Sources */,
 			);

@@ -7,6 +7,12 @@
 
 每个文件夹都是独立的项目，可以使用此链接 [DownGit](https://minhaskamal.github.io/DownGit/#/home) 单独下载某个文件夹。
 
+## [030 Spotlight Search](./030-spotlight-search)
+
+Spotlight 搜索、跳转。
+
+<img src="https://user-images.githubusercontent.com/9289792/37966087-e4503544-31f9-11e8-8ce3-e8cf7b4e0c71.gif" alt="Spotlight Search" width="200" />
+
 ## [029 Self-sizing UITextView in cell](./029-tableviewcell-self-adaption)
 
 UITableViewCell 自适应 UITextView 高度。
