@@ -2,7 +2,7 @@
 
 ## Demo
 
-<img src="https://user-images.githubusercontent.com/9289792/37338118-6abe4efe-26f1-11e8-951d-1179d221e08a.gif" alt="Custom Transition" width="300" />
+<img src="https://user-images.githubusercontent.com/9289792/37338118-6abe4efe-26f1-11e8-951d-1179d221e08a.gif" alt="Custom Transition" width="280" />
 
 ## 知识点
 

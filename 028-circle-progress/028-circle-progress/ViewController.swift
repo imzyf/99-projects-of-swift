@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var progress: CGFloat = 0
     var timer: Timer?
+    var step: CGFloat = 0.1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +21,14 @@ class ViewController: UIViewController {
         progressView.center = view.center
         view.addSubview(progressView)
 
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(step), repeats: true) { (_) in
             self.updateProgress()
         }
     }
     
     func updateProgress() {
-        progress += CGFloat(100.0/600.0)
-        progressView.setProgress(progress, animated: true)
+        progress += step
+        progressView.setProgress(progress * (1000.0/100.0), animated: true)
         if progress > 95 {
             timer?.invalidate()
         }

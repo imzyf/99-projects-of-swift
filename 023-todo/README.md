@@ -2,7 +2,7 @@
 
 ## Demo
 
-<img src="https://user-images.githubusercontent.com/9289792/37326421-170b08de-26cd-11e8-80ab-125f4ed8f400.gif" alt="Todo" width="300" />
+<img src="https://user-images.githubusercontent.com/9289792/37326421-170b08de-26cd-11e8-80ab-125f4ed8f400.gif" alt="Todo" width="280" />
 
 ## 知识点
 
