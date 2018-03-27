@@ -7,6 +7,12 @@
 
 每个文件夹都是独立的项目，可以使用此链接 [DownGit](https://minhaskamal.github.io/DownGit/#/home) 单独下载某个文件夹。
 
+## [029 Self-sizing UITextView in cell](./029-tableviewcell-self-adaption)
+
+UITableViewCell 自适应 UITextView 高度。
+
+<img src="https://user-images.githubusercontent.com/9289792/37953137-931860e0-31d4-11e8-8809-c871b09f9519.gif" alt="Self-sizing UITextView in cell" width="200" />
+
 ## [028 Cirle Progress](./028-circle-progress)
 
 环形进度条。
