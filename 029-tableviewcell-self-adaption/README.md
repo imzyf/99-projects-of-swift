@@ -14,4 +14,4 @@ UITableViewCell 自适应 UITextView 高度。
 ## Reference
 
 > - [Self-sizing UITextView in a UITableView using Auto Layout (like Reminders.app)](http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/)
-> - [http://vit0.com/blog/2014/12/25/ios-textview-in-cell/)](http://vit0.com/blog/2014/12/25/ios-textview-in-cell/)
+> - [iOS UITextView 输入内容实时更新 cell 的高度](http://vit0.com/blog/2014/12/25/ios-textview-in-cell/)
