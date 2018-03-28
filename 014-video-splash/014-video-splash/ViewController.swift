@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: VideoSplashViewController {
     
+    let buttonHeight: CGFloat = 50
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,40 +30,43 @@ class ViewController: VideoSplashViewController {
             self.restartForeground = true
         }
         
-        // Sample UI
-        let rect = view.frame
-        let buttonHeight: CGFloat = 50
-        
-        let logoImageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
         view.addSubview(logoImageView)
-        logoImageView.frame = CGRect(x: 0, y: 50, width: rect.width*0.8, height: 80)
-        logoImageView.center.x = self.view.center.x
-        logoImageView.contentMode = .scaleAspectFit
-        
-        // login button
-        let loginButton = UIButton(frame: CGRect(x: 0, y: (rect.height - buttonHeight), width: rect.width/2, height: buttonHeight))
-        loginButton.setTitle("LOG IN", for: .normal)
-        loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        loginButton.setTitleColor(.white, for: .normal)
-        loginButton.backgroundColor = UIColor(red: 35/255.0, green: 36/255.0, blue: 38/255.0, alpha: 1)
         view.addSubview(loginButton)
-        
-        // signup button
-        let signupButton = UIButton(frame: CGRect(x: rect.width/2, y: (rect.height - buttonHeight), width: rect.width/2, height: buttonHeight))
-        signupButton.setTitle("SIGN UP", for: .normal)
-        signupButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        signupButton.setTitleColor(.white, for: .normal)
-        signupButton.backgroundColor = UIColor(red: 42/255.0, green: 183/255.0, blue: 90/255.0, alpha: 1)
         view.addSubview(signupButton)
     }
     
-    // override var prefersStatusBarHidden:Bool { return true }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let safeArea = view.safeAreaInsets
+        let rect = view.safeAreaLayoutGuide.layoutFrame
+     
+        logoImageView.frame = CGRect(x: 0, y: safeArea.top + 50, width: rect.width, height: 80)
+        loginButton.frame = CGRect(x: 0, y: (safeArea.top + rect.height - buttonHeight), width: rect.width/2, height: buttonHeight)
+        signupButton.frame = CGRect(x: loginButton.frame.maxX, y: loginButton.frame.minY, width: rect.width/2, height: buttonHeight)
     }
     
+    lazy var logoImageView: UIImageView = {
+        let view = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
     
+    lazy var loginButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("LOG IN", for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        btn.setTitleColor(.white, for: .normal)
+        btn.backgroundColor = UIColor(red: 35/255.0, green: 36/255.0, blue: 38/255.0, alpha: 1)
+        return btn
+    }()
+    
+    lazy var signupButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("SIGN UP", for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        btn.setTitleColor(.white, for: .normal)
+        btn.backgroundColor = UIColor(red: 42/255.0, green: 183/255.0, blue: 90/255.0, alpha: 1)
+        return btn
+    }()
 }
 
