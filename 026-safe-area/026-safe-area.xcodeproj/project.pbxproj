@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0D5B50206CB62700F499EE /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B4F206CB62700F499EE /* CustomView.swift */; };
+		FD0D5B53206CBCB600F499EE /* AttachedSafeAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B52206CBCB600F499EE /* AttachedSafeAreaController.swift */; };
+		FD0D5B55206CD2C800F499EE /* LabelAttachedEdgesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B54206CD2C800F499EE /* LabelAttachedEdgesController.swift */; };
+		FD0D5B57206CD32800F499EE /* LabelCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B56206CD32800F499EE /* LabelCustomView.swift */; };
 		FD73B006204ECBEC0039F34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73B005204ECBEC0039F34B /* AppDelegate.swift */; };
-		FD73B008204ECBEC0039F34B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73B007204ECBEC0039F34B /* ViewController.swift */; };
+		FD73B008204ECBEC0039F34B /* AttachedEdgesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73B007204ECBEC0039F34B /* AttachedEdgesController.swift */; };
 		FD73B00B204ECBEC0039F34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD73B009204ECBEC0039F34B /* Main.storyboard */; };
 		FD73B00D204ECBEC0039F34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD73B00C204ECBEC0039F34B /* Assets.xcassets */; };
 		FD73B010204ECBEC0039F34B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD73B00E204ECBEC0039F34B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0D5B4F206CB62700F499EE /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		FD0D5B52206CBCB600F499EE /* AttachedSafeAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachedSafeAreaController.swift; sourceTree = "<group>"; };
+		FD0D5B54206CD2C800F499EE /* LabelAttachedEdgesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttachedEdgesController.swift; sourceTree = "<group>"; };
+		FD0D5B56206CD32800F499EE /* LabelCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomView.swift; sourceTree = "<group>"; };
 		FD73B002204ECBEC0039F34B /* 026-safe-area.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "026-safe-area.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD73B005204ECBEC0039F34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD73B007204ECBEC0039F34B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD73B007204ECBEC0039F34B /* AttachedEdgesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachedEdgesController.swift; sourceTree = "<group>"; };
 		FD73B00A204ECBEC0039F34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD73B00C204ECBEC0039F34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD73B00F204ECBEC0039F34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0D5B51206CB9A400F499EE /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				FD73B007204ECBEC0039F34B /* AttachedEdgesController.swift */,
+				FD0D5B52206CBCB600F499EE /* AttachedSafeAreaController.swift */,
+				FD0D5B4F206CB62700F499EE /* CustomView.swift */,
+				FD0D5B54206CD2C800F499EE /* LabelAttachedEdgesController.swift */,
+				FD0D5B56206CD32800F499EE /* LabelCustomView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		FD73AFF9204ECBEC0039F34B = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +74,8 @@
 		FD73B004204ECBEC0039F34B /* 026-safe-area */ = {
 			isa = PBXGroup;
 			children = (
+				FD0D5B51206CB9A400F499EE /* UIView */,
 				FD73B005204ECBEC0039F34B /* AppDelegate.swift */,
-				FD73B007204ECBEC0039F34B /* ViewController.swift */,
 				FD73B009204ECBEC0039F34B /* Main.storyboard */,
 				FD73B00C204ECBEC0039F34B /* Assets.xcassets */,
 				FD73B00E204ECBEC0039F34B /* LaunchScreen.storyboard */,
@@ -136,7 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD73B008204ECBEC0039F34B /* ViewController.swift in Sources */,
+				FD0D5B50206CB62700F499EE /* CustomView.swift in Sources */,
+				FD0D5B57206CD32800F499EE /* LabelCustomView.swift in Sources */,
+				FD0D5B55206CD2C800F499EE /* LabelAttachedEdgesController.swift in Sources */,
+				FD73B008204ECBEC0039F34B /* AttachedEdgesController.swift in Sources */,
+				FD0D5B53206CBCB600F499EE /* AttachedSafeAreaController.swift in Sources */,
 				FD73B006204ECBEC0039F34B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G79JFKF86J;
 				INFOPLIST_FILE = "026-safe-area/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-26-safe-area";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,8 +315,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G79JFKF86J;
 				INFOPLIST_FILE = "026-safe-area/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zyf.-26-safe-area";
 				PRODUCT_NAME = "$(TARGET_NAME)";
