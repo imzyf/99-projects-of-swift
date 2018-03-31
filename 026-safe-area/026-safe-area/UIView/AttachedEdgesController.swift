@@ -16,13 +16,21 @@ class AttachedEdgesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let topView = CustomView()
-        let bottomView = CustomView()
+        let topSubview = CustomView()
+        let bottomSubview = CustomView()
         
-        view.addSubview(topView)
-        view.addSubview(bottomView)
+        view.addSubview(topSubview)
+        view.addSubview(bottomSubview)
         
-        topView.frame = CGRect(x: 0, y: 0, width: screenW, height: 200)
-        bottomView.frame = CGRect(x: 0, y: screenH - 200, width: screenW, height: 200)
+        topSubview.frame = CGRect(x: 0, y: 0, width: screenW, height: 200)
+        bottomSubview.frame = CGRect(x: 0, y: screenH - 200, width: screenW, height: 200)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(close))
+        topSubview.addGestureRecognizer(tap)
+        topSubview.isUserInteractionEnabled = true
+    }
+    
+    @objc func close() {
+        dismiss(animated: true, completion: nil)
     }
 }

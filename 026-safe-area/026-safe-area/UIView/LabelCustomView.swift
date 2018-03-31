@@ -27,6 +27,12 @@ class LabelCustomView: UIView {
             // Fallback on earlier versions
         }
     }
+    
+    @available(iOS 11.0, *)
+    override func safeAreaInsetsDidChange() {
+        super.safeAreaInsetsDidChange()
+        print("-- called safeAreaInsetsDidChange")
+    }
  
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -11,6 +11,8 @@
 		FD0D5B53206CBCB600F499EE /* AttachedSafeAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B52206CBCB600F499EE /* AttachedSafeAreaController.swift */; };
 		FD0D5B55206CD2C800F499EE /* LabelAttachedEdgesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B54206CD2C800F499EE /* LabelAttachedEdgesController.swift */; };
 		FD0D5B57206CD32800F499EE /* LabelCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B56206CD32800F499EE /* LabelCustomView.swift */; };
+		FD0D5B5A206CD8C900F499EE /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B59206CD8C900F499EE /* AdditionalViewController.swift */; };
+		FD0D5B5C206CDFCC00F499EE /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D5B5B206CDFCC00F499EE /* RootTableViewController.swift */; };
 		FD73B006204ECBEC0039F34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73B005204ECBEC0039F34B /* AppDelegate.swift */; };
 		FD73B008204ECBEC0039F34B /* AttachedEdgesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD73B007204ECBEC0039F34B /* AttachedEdgesController.swift */; };
 		FD73B00B204ECBEC0039F34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD73B009204ECBEC0039F34B /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		FD0D5B52206CBCB600F499EE /* AttachedSafeAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachedSafeAreaController.swift; sourceTree = "<group>"; };
 		FD0D5B54206CD2C800F499EE /* LabelAttachedEdgesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttachedEdgesController.swift; sourceTree = "<group>"; };
 		FD0D5B56206CD32800F499EE /* LabelCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomView.swift; sourceTree = "<group>"; };
+		FD0D5B59206CD8C900F499EE /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
+		FD0D5B5B206CDFCC00F499EE /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		FD73B002204ECBEC0039F34B /* 026-safe-area.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "026-safe-area.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD73B005204ECBEC0039F34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD73B007204ECBEC0039F34B /* AttachedEdgesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachedEdgesController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		FD0D5B58206CD76E00F499EE /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD0D5B59206CD8C900F499EE /* AdditionalViewController.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		FD73AFF9204ECBEC0039F34B = {
 			isa = PBXGroup;
 			children = (
@@ -75,11 +87,13 @@
 			isa = PBXGroup;
 			children = (
 				FD0D5B51206CB9A400F499EE /* UIView */,
+				FD0D5B58206CD76E00F499EE /* UIViewController */,
 				FD73B005204ECBEC0039F34B /* AppDelegate.swift */,
 				FD73B009204ECBEC0039F34B /* Main.storyboard */,
 				FD73B00C204ECBEC0039F34B /* Assets.xcassets */,
 				FD73B00E204ECBEC0039F34B /* LaunchScreen.storyboard */,
 				FD73B011204ECBEC0039F34B /* Info.plist */,
+				FD0D5B5B206CDFCC00F499EE /* RootTableViewController.swift */,
 			);
 			path = "026-safe-area";
 			sourceTree = "<group>";
@@ -159,6 +173,8 @@
 				FD0D5B50206CB62700F499EE /* CustomView.swift in Sources */,
 				FD0D5B57206CD32800F499EE /* LabelCustomView.swift in Sources */,
 				FD0D5B55206CD2C800F499EE /* LabelAttachedEdgesController.swift in Sources */,
+				FD0D5B5C206CDFCC00F499EE /* RootTableViewController.swift in Sources */,
+				FD0D5B5A206CD8C900F499EE /* AdditionalViewController.swift in Sources */,
 				FD73B008204ECBEC0039F34B /* AttachedEdgesController.swift in Sources */,
 				FD0D5B53206CBCB600F499EE /* AttachedSafeAreaController.swift in Sources */,
 				FD73B006204ECBEC0039F34B /* AppDelegate.swift in Sources */,

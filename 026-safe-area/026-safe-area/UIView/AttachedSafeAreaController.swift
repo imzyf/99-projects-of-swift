@@ -18,6 +18,14 @@ class AttachedSafeAreaController: UIViewController {
         view.addSubview(topSubview)
         view.addSubview(bottomSubview)
         view.backgroundColor = .lightGray
+   
+        let tap = UITapGestureRecognizer(target: self, action: #selector(close))
+        topSubview.addGestureRecognizer(tap)
+        topSubview.isUserInteractionEnabled = true
+    }
+    
+    @objc func close() {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
