@@ -13,6 +13,7 @@
 		FDFBAE4E21F2B79000F257CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFBAE4C21F2B79000F257CE /* Main.storyboard */; };
 		FDFBAE5021F2B79200F257CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFBAE4F21F2B79200F257CE /* Assets.xcassets */; };
 		FDFBAE5321F2B79200F257CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFBAE5121F2B79200F257CE /* LaunchScreen.storyboard */; };
+		FDFBAE5B21F2F50E00F257CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FDFBAE5A21F2F50E00F257CE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FDFBAE4F21F2B79200F257CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDFBAE5221F2B79200F257CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDFBAE5421F2B79200F257CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFBAE5A21F2F50E00F257CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				795743CB3655354225204941 /* Pods-promisekit-demo.debug.xcconfig */,
 				73DE98DB80A1AE3146A1C70A /* Pods-promisekit-demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,6 +80,7 @@
 		FDFBAE4721F2B79000F257CE /* promisekit-demo */ = {
 			isa = PBXGroup;
 			children = (
+				FDFBAE5A21F2F50E00F257CE /* README.md */,
 				FDFBAE4821F2B79000F257CE /* AppDelegate.swift */,
 				FDFBAE4A21F2B79000F257CE /* ViewController.swift */,
 				FDFBAE4C21F2B79000F257CE /* Main.storyboard */,
@@ -151,6 +153,7 @@
 			files = (
 				FDFBAE5321F2B79200F257CE /* LaunchScreen.storyboard in Resources */,
 				FDFBAE5021F2B79200F257CE /* Assets.xcassets in Resources */,
+				FDFBAE5B21F2F50E00F257CE /* README.md in Resources */,
 				FDFBAE4E21F2B79000F257CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
